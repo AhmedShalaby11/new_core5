@@ -26,8 +26,7 @@ namespace asp_unit5
             casulity.patientName = textbox_PatientName.Text;
             casulity.patientAge = DropDown_PatientAge.Text;
             casulity.ticketId = textbox_TicketNumber.Text;
-            casulity.AdmissionDate = Date_AdmissionDate.Value;
-            
+            casulity.AdmissionDate = Date_AdmissionDate.Value;          
             casulity.ParityValue = textbox_Parity.Text;
             casulity.AddedValue = textboxPlus.Text;
             casulity.Weeks =  Convert.ToInt32(DropDown_Diagnosis_Weeks.Text);
