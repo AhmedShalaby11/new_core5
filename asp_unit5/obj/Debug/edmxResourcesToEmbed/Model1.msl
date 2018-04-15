@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="unit5Model1StoreContainer" CdmEntityContainer="unit5Entities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="unit5Model1.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasulityProfiles">
+      <EntityTypeMapping TypeName="unit5Model1.CasulityProfile">
+        <MappingFragment StoreEntitySet="CasulityProfile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
+          <ScalarProperty Name="Assistants" ColumnName="Assistants" />
+          <ScalarProperty Name="ChildState" ColumnName="ChildState" />
+          <ScalarProperty Name="Complications" ColumnName="Complications" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
+          <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="ParityValue" ColumnName="ParityValue" />
+          <ScalarProperty Name="Presentation" ColumnName="Presentation" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Supervisors" ColumnName="Supervisors" />
+          <ScalarProperty Name="Surgeons" ColumnName="Surgeons" />
+          <ScalarProperty Name="Weeks" ColumnName="Weeks" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ICU" ColumnName="ICU" />
+          <ScalarProperty Name="patientAge" ColumnName="patientAge" />
+          <ScalarProperty Name="patientName" ColumnName="patientName" />
+          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+          <ScalarProperty Name="NumberOfLivingFemale" ColumnName="NumberOfLivingFemale" />
+          <ScalarProperty Name="NumberOfLivingMale" ColumnName="NumberOfLivingMale" />
+          <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
+          <ScalarProperty Name="By" ColumnName="By" />
+          <ScalarProperty Name="Obstetric" ColumnName="Obstetric" />
+          <ScalarProperty Name="Disorder" ColumnName="Disorder" />
+          <ScalarProperty Name="AdditionalComplications" ColumnName="AdditionalComplications" />
+          <ScalarProperty Name="NeonatalCondition" ColumnName="NeonatalCondition" />
+          <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
+          <ScalarProperty Name="Indications" ColumnName="Indications" />
+          <ScalarProperty Name="InterventionDate" ColumnName="InterventionDate" />
+          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Complicaitons">
+      <EntityTypeMapping TypeName="unit5Model1.Complicaiton">
+        <MappingFragment StoreEntitySet="Complicaitons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_by">
+      <EntityTypeMapping TypeName="unit5Model1.conf_by">
+        <MappingFragment StoreEntitySet="conf_by">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="element_name" ColumnName="element_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_child_presentation">
+      <EntityTypeMapping TypeName="unit5Model1.conf_child_presentation">
+        <MappingFragment StoreEntitySet="conf_child_presentation">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="presentation_name" ColumnName="presentation_name" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_child_state">
+      <EntityTypeMapping TypeName="unit5Model1.conf_child_state">
+        <MappingFragment StoreEntitySet="conf_child_state">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="state_name" ColumnName="state_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_cs_indication">
+      <EntityTypeMapping TypeName="unit5Model1.conf_cs_indication">
+        <MappingFragment StoreEntitySet="conf_cs_indication">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="cs_indication_name" ColumnName="cs_indication_name" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_degree">
+      <EntityTypeMapping TypeName="unit5Model1.conf_degree">
+        <MappingFragment StoreEntitySet="conf_degree">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="degree_name" ColumnName="degree_name" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_GynaDisorder">
+      <EntityTypeMapping TypeName="unit5Model1.conf_GynaDisorder">
+        <MappingFragment StoreEntitySet="conf_GynaDisorder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="element_name" ColumnName="element_name" />
+          <ScalarProperty Name="element_type" ColumnName="element_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_Intervention">
+      <EntityTypeMapping TypeName="unit5Model1.conf_Intervention">
+        <MappingFragment StoreEntitySet="conf_Intervention">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="intervention_name" ColumnName="intervention_name" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_medicalDisorder">
+      <EntityTypeMapping TypeName="unit5Model1.conf_medicalDisorder">
+        <MappingFragment StoreEntitySet="conf_medicalDisorder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="element_name" ColumnName="element_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_medicalObestetric">
+      <EntityTypeMapping TypeName="unit5Model1.conf_medicalObestetric">
+        <MappingFragment StoreEntitySet="conf_medicalObestetric">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="element_name" ColumnName="element_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_Outcome">
+      <EntityTypeMapping TypeName="unit5Model1.conf_Outcome">
+        <MappingFragment StoreEntitySet="conf_Outcome">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="Outcome_name" ColumnName="Outcome_name" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_Outcome_State">
+      <EntityTypeMapping TypeName="unit5Model1.conf_Outcome_State">
+        <MappingFragment StoreEntitySet="conf_Outcome_State">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="state_name" ColumnName="state_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conf_title">
+      <EntityTypeMapping TypeName="unit5Model1.conf_title">
+        <MappingFragment StoreEntitySet="conf_title">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="title_name" ColumnName="title_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doctor_profile">
+      <EntityTypeMapping TypeName="unit5Model1.doctor_profile">
+        <MappingFragment StoreEntitySet="doctor_profile">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="doctor_bach_year" ColumnName="doctor_bach_year" />
+          <ScalarProperty Name="doctor_birthdate" ColumnName="doctor_birthdate" />
+          <ScalarProperty Name="doctor_degree" ColumnName="doctor_degree" />
+          <ScalarProperty Name="doctor_image_URL" ColumnName="doctor_image_URL" />
+          <ScalarProperty Name="doctor_MCS_year" ColumnName="doctor_MCS_year" />
+          <ScalarProperty Name="doctor_name" ColumnName="doctor_name" />
+          <ScalarProperty Name="doctor_other_degrees" ColumnName="doctor_other_degrees" />
+          <ScalarProperty Name="doctor_other_qualifications" ColumnName="doctor_other_qualifications" />
+          <ScalarProperty Name="doctor_PHD_year" ColumnName="doctor_PHD_year" />
+          <ScalarProperty Name="doctor_precense" ColumnName="doctor_precense" />
+          <ScalarProperty Name="doctor_title" ColumnName="doctor_title" />
+          <ScalarProperty Name="record_date" ColumnName="record_date" />
+          <ScalarProperty Name="DoctorLocation" ColumnName="DoctorLocation" />
+          <ScalarProperty Name="DoctorMail" ColumnName="DoctorMail" />
+          <ScalarProperty Name="DoctorMobile" ColumnName="DoctorMobile" />
+          <ScalarProperty Name="DoctorAcademicDegree" ColumnName="DoctorAcademicDegree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gynacologies">
+      <EntityTypeMapping TypeName="unit5Model1.Gynacology">
+        <MappingFragment StoreEntitySet="Gynacology">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
+          <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
+          <ScalarProperty Name="Assistants" ColumnName="Assistants" />
+          <ScalarProperty Name="ChildState" ColumnName="ChildState" />
+          <ScalarProperty Name="Complications" ColumnName="Complications" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="DischargeDiagnoses" ColumnName="DischargeDiagnoses" />
+          <ScalarProperty Name="DischargeFollowupPlan" ColumnName="DischargeFollowupPlan" />
+          <ScalarProperty Name="DischargeSummary" ColumnName="DischargeSummary" />
+          <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
+          <ScalarProperty Name="ICU" ColumnName="ICU" />
+          <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+          <ScalarProperty Name="NumberOfLivingFemale" ColumnName="NumberOfLivingFemale" />
+          <ScalarProperty Name="NumberOfLivingMale" ColumnName="NumberOfLivingMale" />
+          <ScalarProperty Name="OperativeDate" ColumnName="OperativeDate" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="ParityValue" ColumnName="ParityValue" />
+          <ScalarProperty Name="Presentation" ColumnName="Presentation" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Supervisors" ColumnName="Supervisors" />
+          <ScalarProperty Name="Surgeons" ColumnName="Surgeons" />
+          <ScalarProperty Name="Weeks" ColumnName="Weeks" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="patientAge" ColumnName="patientAge" />
+          <ScalarProperty Name="patientName" ColumnName="patientName" />
+          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NeonatalOutcomes">
+      <EntityTypeMapping TypeName="unit5Model1.NeonatalOutcome">
+        <MappingFragment StoreEntitySet="NeonatalOutcome">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Recid" ColumnName="Recid" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_diagnose">
+      <EntityTypeMapping TypeName="unit5Model1.patient_diagnose">
+        <MappingFragment StoreEntitySet="patient_diagnose">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="Assistant" ColumnName="Assistant" />
+          <ScalarProperty Name="child_Presentation" ColumnName="child_Presentation" />
+          <ScalarProperty Name="child_state" ColumnName="child_state" />
+          <ScalarProperty Name="Complications" ColumnName="Complications" />
+          <ScalarProperty Name="cs_indication" ColumnName="cs_indication" />
+          <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
+          <ScalarProperty Name="GA" ColumnName="GA" />
+          <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="Outcome_sex" ColumnName="Outcome_sex" />
+          <ScalarProperty Name="Outcome_State" ColumnName="Outcome_State" />
+          <ScalarProperty Name="Outcome_weight" ColumnName="Outcome_weight" />
+          <ScalarProperty Name="Positive_date" ColumnName="Positive_date" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+          <ScalarProperty Name="Surgeon" ColumnName="Surgeon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patient_profile">
+      <EntityTypeMapping TypeName="unit5Model1.patient_profile">
+        <MappingFragment StoreEntitySet="patient_profile">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="patient_address" ColumnName="patient_address" />
+          <ScalarProperty Name="patient_age" ColumnName="patient_age" />
+          <ScalarProperty Name="patient_birthdate" ColumnName="patient_birthdate" />
+          <ScalarProperty Name="patient_contact" ColumnName="patient_contact" />
+          <ScalarProperty Name="patient_email" ColumnName="patient_email" />
+          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+          <ScalarProperty Name="patient_image_url" ColumnName="patient_image_url" />
+          <ScalarProperty Name="Patient_name" ColumnName="Patient_name" />
+          <ScalarProperty Name="patient_sex" ColumnName="patient_sex" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

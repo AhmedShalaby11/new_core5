@@ -94,6 +94,15 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_By;
         
         /// <summary>
+        /// byConfig control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource byConfig;
+        
+        /// <summary>
         /// DropDown_Diagnosis_Obstetric control.
         /// </summary>
         /// <remarks>
@@ -103,6 +112,15 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Obstetric;
         
         /// <summary>
+        /// obstetricConf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource obstetricConf;
+        
+        /// <summary>
         /// DropDown_Diagnosis_Disorder control.
         /// </summary>
         /// <remarks>
@@ -110,6 +128,15 @@ namespace asp_unit5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Disorder;
+        
+        /// <summary>
+        /// medicalDisorderConf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource medicalDisorderConf;
         
         /// <summary>
         /// DropDown_Diagnosis_Presentation control.

@@ -32,9 +32,8 @@
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="DropDownList5">Patient Age </label>
 
-                    <asp:DropDownList ID="DropDown_PatientAge" CssClass="btn-secondary btn form-control " runat="server">
+                    <asp:DropDownList ID="DropDown_PatientAge" CssClass="border-danger btn form-control " runat="server">
                         <asp:ListItem>Select</asp:ListItem>
-                        <asp:ListItem ng-repeat="a in patienAgeRange">{{a}}</asp:ListItem>
 
                     </asp:DropDownList>
 
@@ -95,9 +94,8 @@
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">Weeks</label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_Weeks" CssClass=" form-control btn-secondary btn " runat="server">
+                    <asp:DropDownList ID="DropDown_Diagnosis_Weeks" CssClass=" form-control border-danger btn " runat="server">
                         <asp:ListItem>Select</asp:ListItem>
-
                     </asp:DropDownList>
 
                 </div>
@@ -107,9 +105,9 @@
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">Days</label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_Days" CssClass=" form-control btn-secondary btn" runat="server">
+                    <asp:DropDownList ID="DropDown_Diagnosis_Days" CssClass=" form-control border-danger btn" runat="server">
                         <asp:ListItem>Select</asp:ListItem>
-
+                         
                     </asp:DropDownList>
 
                 </div>
@@ -118,10 +116,12 @@
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">By </label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_By" CssClass="  form-control btn-secondary btn" runat="server">
+                    <asp:DropDownList ID="DropDown_Diagnosis_By" CssClass="  form-control border-danger btn" runat="server" DataSourceID="byConfig" DataTextField="element_name" DataValueField="element_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
+
+                    <asp:SqlDataSource ID="byConfig" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_by]"></asp:SqlDataSource>
 
                 </div>
             </div>
@@ -129,10 +129,12 @@
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">Obstetric Disorder </label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_Obstetric" CssClass="btn-secondary btn  form-control" runat="server">
+                    <asp:DropDownList ID="DropDown_Diagnosis_Obstetric" CssClass="border-danger btn  form-control" runat="server" DataSourceID="obstetricConf" DataTextField="element_name" DataValueField="element_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
+
+                    <asp:SqlDataSource ID="obstetricConf" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalObestetric]"></asp:SqlDataSource>
 
                 </div>
             </div>
@@ -141,10 +143,12 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Medical Disorder </label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_Disorder" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server">
+                    <asp:DropDownList ID="DropDown_Diagnosis_Disorder" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="medicalDisorderConf" DataTextField="element_name" DataValueField="element_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
+
+                    <asp:SqlDataSource ID="medicalDisorderConf" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
 
                 </div>
             </div>
@@ -161,7 +165,7 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Presentation </label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_Presentation" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="Presentation_CS" DataTextField="presentation_name" DataValueField="presentation_name">
+                    <asp:DropDownList ID="DropDown_Diagnosis_Presentation" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="Presentation_CS" DataTextField="presentation_name" DataValueField="presentation_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
@@ -175,7 +179,7 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">State </label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_State" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="State_CS" DataTextField="state_name" DataValueField="state_name">
+                    <asp:DropDownList ID="DropDown_Diagnosis_State" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="State_CS" DataTextField="state_name" DataValueField="state_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
@@ -222,7 +226,7 @@
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Intervention </label>
 
-                        <asp:DropDownList ng-change="Get_InterventionType(ng0interventionName)" ng-model="ng0interventionName" ID="DropDown_Intervention_InterventionSelection" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="Intervention_CS" DataTextField="intervention_name" DataValueField="intervention_name">
+                        <asp:DropDownList ng-change="Get_InterventionType(ng0interventionName)" ng-model="ng0interventionName" ID="DropDown_Intervention_InterventionSelection" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="Intervention_CS" DataTextField="intervention_name" DataValueField="intervention_name">
                             <asp:ListItem>Select</asp:ListItem>
 
                         </asp:DropDownList>
@@ -237,7 +241,7 @@
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Complications </label>
 
-                        <asp:DropDownList ID="DropDown_Intervention_Complications" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server">
+                        <asp:DropDownList ID="DropDown_Intervention_Complications" CssClass="border-danger btn border-danger border-danger form-control" runat="server">
                             <asp:ListItem>Select</asp:ListItem>
 
                         </asp:DropDownList>
@@ -250,7 +254,7 @@
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Additional Complication </label>
 
-                        <asp:DropDownList ID="DropDown_Intervention_ExtraComplications" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server">
+                        <asp:DropDownList ID="DropDown_Intervention_ExtraComplications" CssClass="border-danger btn border-danger border-danger form-control" runat="server">
                             <asp:ListItem>Select</asp:ListItem>
 
                         </asp:DropDownList>
@@ -272,8 +276,10 @@
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Outcome </label>
 
-                        <asp:DropDownList ID="DropDown_Intervention_Outcome" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="Outcome_CS" DataTextField="Outcome_name" DataValueField="Outcome_name">
+                        <asp:DropDownList ID="DropDown_Intervention_Outcome" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="Outcome_CS" DataTextField="Outcome_name" DataValueField="Outcome_name">
                             <asp:ListItem>Select</asp:ListItem>
+
+                            <asp:ListItem>test</asp:ListItem>
 
                         </asp:DropDownList>
 
@@ -287,9 +293,11 @@
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Sex </label>
 
-                        <asp:DropDownList ID="DropDown_Intervention_Sex" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server">
+                        <asp:DropDownList ID="DropDown_Intervention_Sex" CssClass="border-danger  btn border-danger border-danger form-control" runat="server">
                             <asp:ListItem>Select</asp:ListItem>
-
+                             <asp:ListItem>Male</asp:ListItem>
+                             <asp:ListItem>Female</asp:ListItem>
+                             <asp:ListItem>Undefined</asp:ListItem>
                         </asp:DropDownList>
 
                     </div>
@@ -298,7 +306,7 @@
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Neonatal Condition </label>
 
-                        <asp:DropDownList ID="DropDown_Intervention_NeonatalCondition" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="NeonataOutcome_CS" DataTextField="Name" DataValueField="Name">
+                        <asp:DropDownList ID="DropDown_Intervention_NeonatalCondition" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="NeonataOutcome_CS" DataTextField="Name" DataValueField="Name">
                             <asp:ListItem>Select</asp:ListItem>
 
                         </asp:DropDownList>
@@ -314,7 +322,7 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Other Intervention </label>
 
-                    <asp:DropDownList ID="DropDown_Other_Interventions" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="data_without_outcome" DataTextField="intervention_name" DataValueField="intervention_name">
+                    <asp:DropDownList ID="DropDown_Other_Interventions" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="data_without_outcome" DataTextField="intervention_name" DataValueField="intervention_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
@@ -331,7 +339,7 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Indications </label>
 
-                    <asp:DropDownList ID="DropDown_cs_Indications" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="cs_Indications" DataTextField="cs_indication_name" DataValueField="cs_indication_name">
+                    <asp:DropDownList ID="DropDown_cs_Indications" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="cs_Indications" DataTextField="cs_indication_name" DataValueField="cs_indication_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
@@ -362,7 +370,7 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Surgeon</label>
 
-                    <asp:DropDownList ng-model="ng0Surgeon" ID="DropDown_Staff_Surgeon" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="Doctor_Name_CS" DataTextField="doctor_name" DataValueField="doctor_name">
+                    <asp:DropDownList ng-model="ng0Surgeon" ID="DropDown_Staff_Surgeon" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="Doctor_Name_CS" DataTextField="doctor_name" DataValueField="doctor_name">
                         <asp:ListItem Value="1">Select</asp:ListItem>
 
                     </asp:DropDownList>
@@ -375,7 +383,7 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Assistant</label>
 
-                    <asp:DropDownList ID="DropDown_Staff_Assistant" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="Doctor_Name_CS" DataTextField="doctor_name" DataValueField="doctor_name">
+                    <asp:DropDownList ID="DropDown_Staff_Assistant" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="Doctor_Name_CS" DataTextField="doctor_name" DataValueField="doctor_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
@@ -386,7 +394,7 @@
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Supervisor</label>
 
-                    <asp:DropDownList ID="DropDown_Staff_Supervisor" CssClass="btn-secondary btn btn-secondary btn-secondary form-control" runat="server" DataSourceID="Doctor_Name_CS" DataTextField="doctor_name" DataValueField="doctor_name">
+                    <asp:DropDownList ID="DropDown_Staff_Supervisor" CssClass="border-danger btn border-danger border-danger form-control" runat="server" DataSourceID="Doctor_Name_CS" DataTextField="doctor_name" DataValueField="doctor_name">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>

@@ -19,7 +19,7 @@ namespace asp_unit5
         public string Assistants { get; set; }
         public string ChildState { get; set; }
         public string Complications { get; set; }
-        public Nullable<int> Days { get; set; }
+        public string Days { get; set; }
         public string Dynamics { get; set; }
         public string Intervention { get; set; }
         public string Outcome { get; set; }
@@ -30,14 +30,14 @@ namespace asp_unit5
         public string State { get; set; }
         public string Supervisors { get; set; }
         public string Surgeons { get; set; }
-        public Nullable<int> Weeks { get; set; }
-        public Nullable<double> Weight { get; set; }
+        public string Weeks { get; set; }
+        public string Weight { get; set; }
         public string ICU { get; set; }
         public string patientAge { get; set; }
         public string patientName { get; set; }
         public string ticketId { get; set; }
-        public int NumberOfLivingFemale { get; set; }
-        public int NumberOfLivingMale { get; set; }
+        public string NumberOfLivingFemale { get; set; }
+        public string NumberOfLivingMale { get; set; }
         public string AdmissionDate { get; set; }
         public string InterventionDate { get; set; }
         public string By { get; set; }
