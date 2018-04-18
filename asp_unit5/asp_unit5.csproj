@@ -250,6 +250,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Gynacology.aspx.cs">
+      <DependentUpon>Gynacology.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gynacology.aspx.designer.cs">
+      <DependentUpon>Gynacology.aspx</DependentUpon>
+    </Compile>
     <Compile Include="master1.Master.cs">
       <DependentUpon>master1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -394,6 +401,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Gynacology.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />

@@ -5,3 +5,4 @@ C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\asp_unit5.pdb
 C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.csproj.CoreCompileInputs.cache
 C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.dll
 C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.pdb
+C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.csprojResolveAssemblyReference.cache
