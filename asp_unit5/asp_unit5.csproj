@@ -268,12 +268,20 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angular\AngularApp.js" />
     <Content Include="Angular\CasulityController.js" />
     <Content Include="Angular\HomeController.js" />
     <Content Include="Angular\PerformanceController.js" />
+    <Content Include="Angular\searchController.js" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\asp_unit5.dll" />
@@ -543,6 +551,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="search.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

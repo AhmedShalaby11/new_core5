@@ -16,6 +16,36 @@ namespace asp_unit5.API
     {
         private Entity.unit5Entities db = new Entity.unit5Entities();
 
+
+
+        [Route("{getPatientProfile}")]
+        [HttpGet]
+
+        public IHttpActionResult getPatientData([FromUri] string name, string ticketId)
+        {
+
+            var Profile_DataObject = (dynamic)null;
+
+
+            if (name != "undefined")
+            {
+
+                Profile_DataObject = db.CasulityProfiles.Where(u => u.patientName.Contains(name)).ToList();
+
+
+            }
+            else if (ticketId != "undefined")
+            {
+
+                Profile_DataObject = db.CasulityProfiles.Where(u => u.ticketId == ticketId).ToList();
+
+            }
+
+
+            return Ok(Profile_DataObject);
+        }
+
+
         // GET: api/conf_Intervention
         public IQueryable<Entity.conf_Intervention> Getconf_Intervention()
         {
