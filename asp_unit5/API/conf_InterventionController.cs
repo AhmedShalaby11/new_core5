@@ -14,10 +14,10 @@ namespace asp_unit5.API
 {
     public class conf_InterventionController : ApiController
     {
-        private unit5Entities db = new unit5Entities();
+        private Entity.unit5Entities db = new Entity.unit5Entities();
 
         // GET: api/conf_Intervention
-        public IQueryable<conf_Intervention> Getconf_Intervention()
+        public IQueryable<Entity.conf_Intervention> Getconf_Intervention()
         {
             return db.conf_Intervention;
         }
@@ -37,10 +37,10 @@ namespace asp_unit5.API
 
 
         // GET: api/conf_Intervention/5
-        [ResponseType(typeof(conf_Intervention))]
+        [ResponseType(typeof(Entity.conf_Intervention))]
         public IHttpActionResult Getconf_Intervention(int id)
         {
-            conf_Intervention conf_Intervention = db.conf_Intervention.Find(id);
+            Entity.conf_Intervention conf_Intervention = db.conf_Intervention.Find(id);
             if (conf_Intervention == null)
             {
                 return NotFound();
@@ -51,7 +51,7 @@ namespace asp_unit5.API
 
         // PUT: api/conf_Intervention/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult Putconf_Intervention(int id, conf_Intervention conf_Intervention)
+        public IHttpActionResult Putconf_Intervention(int id, Entity.conf_Intervention conf_Intervention)
         {
             if (!ModelState.IsValid)
             {
@@ -85,8 +85,8 @@ namespace asp_unit5.API
         }
 
         // POST: api/conf_Intervention
-        [ResponseType(typeof(conf_Intervention))]
-        public IHttpActionResult Postconf_Intervention(conf_Intervention conf_Intervention)
+        [ResponseType(typeof(Entity.conf_Intervention))]
+        public IHttpActionResult Postconf_Intervention(Entity.conf_Intervention conf_Intervention)
         {
             if (!ModelState.IsValid)
             {
@@ -100,10 +100,10 @@ namespace asp_unit5.API
         }
 
         // DELETE: api/conf_Intervention/5
-        [ResponseType(typeof(conf_Intervention))]
+        [ResponseType(typeof(Entity.conf_Intervention))]
         public IHttpActionResult Deleteconf_Intervention(int id)
         {
-            conf_Intervention conf_Intervention = db.conf_Intervention.Find(id);
+            Entity.conf_Intervention conf_Intervention = db.conf_Intervention.Find(id);
             if (conf_Intervention == null)
             {
                 return NotFound();

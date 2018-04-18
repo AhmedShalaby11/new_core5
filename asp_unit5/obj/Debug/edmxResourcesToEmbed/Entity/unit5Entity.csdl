@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="unit5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CasulityProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddedValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Assistants" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChildState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Complications" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Days" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Dynamics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Intervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ParityValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Presentation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Supervisors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Surgeons" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Weeks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ICU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="patientAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="patientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfLivingFemale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NumberOfLivingMale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AdmissionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="By" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Obstetric" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Disorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalComplications" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NeonatalCondition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Indications" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InterventionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Complicaiton">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RecDate" Type="DateTime" Precision="7" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="conf_by">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="element_name" Type="String" MaxLength="90" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="conf_child_presentation">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="presentation_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="conf_child_state">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="state_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="conf_cs_indication">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cs_indication_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="conf_degree">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="degree_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="conf_GynaDisorder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="element_name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="element_type" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="conf_Intervention">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="intervention_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="conf_medicalDisorder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="element_name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="conf_medicalObestetric">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="element_name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="conf_Outcome">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Outcome_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="conf_Outcome_State">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="state_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="conf_title">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="title_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="doctor_profile">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doctor_bach_year" Type="DateTime" Precision="0" />
+    <Property Name="doctor_birthdate" Type="DateTime" Precision="0" />
+    <Property Name="doctor_degree" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="doctor_image_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="doctor_MCS_year" Type="DateTime" Precision="0" />
+    <Property Name="doctor_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="doctor_other_degrees" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="doctor_other_qualifications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="doctor_PHD_year" Type="DateTime" Precision="0" />
+    <Property Name="doctor_precense" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doctor_title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="record_date" Type="DateTime" Precision="0" />
+    <Property Name="DoctorLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorMobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorAcademicDegree" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Gynacology">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddedValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdmissionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Assistants" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChildState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Complications" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Days" Type="Int32" Nullable="false" />
+    <Property Name="DischargeDiagnoses" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DischargeFollowupPlan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DischargeSummary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Dynamics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ICU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Intervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfLivingFemale" Type="Int32" Nullable="false" />
+    <Property Name="NumberOfLivingMale" Type="Int32" Nullable="false" />
+    <Property Name="OperativeDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ParityValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Presentation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RecDate" Type="DateTime" Precision="7" />
+    <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Supervisors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Surgeons" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Weeks" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Double" Nullable="false" />
+    <Property Name="patientAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="patientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NeonatalOutcome">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Recid" Type="DateTime" Precision="7" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="patient_diagnose">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Assistant" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="child_Presentation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="child_state" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Complications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cs_indication" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Dynamics" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Intervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Outcome_sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Outcome_State" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Outcome_weight" Type="Double" />
+    <Property Name="Positive_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="Supervisor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Surgeon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="patient_profile">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patient_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="patient_age" Type="Double" />
+    <Property Name="patient_birthdate" Type="DateTime" Precision="0" />
+    <Property Name="patient_contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="patient_email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="patient_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="patient_image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Patient_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="patient_sex" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="rec_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="unit5Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfile" />
+    <EntitySet Name="Complicaitons" EntityType="Self.Complicaiton" />
+    <EntitySet Name="conf_by" EntityType="Self.conf_by" />
+    <EntitySet Name="conf_child_presentation" EntityType="Self.conf_child_presentation" />
+    <EntitySet Name="conf_child_state" EntityType="Self.conf_child_state" />
+    <EntitySet Name="conf_cs_indication" EntityType="Self.conf_cs_indication" />
+    <EntitySet Name="conf_degree" EntityType="Self.conf_degree" />
+    <EntitySet Name="conf_GynaDisorder" EntityType="Self.conf_GynaDisorder" />
+    <EntitySet Name="conf_Intervention" EntityType="Self.conf_Intervention" />
+    <EntitySet Name="conf_medicalDisorder" EntityType="Self.conf_medicalDisorder" />
+    <EntitySet Name="conf_medicalObestetric" EntityType="Self.conf_medicalObestetric" />
+    <EntitySet Name="conf_Outcome" EntityType="Self.conf_Outcome" />
+    <EntitySet Name="conf_Outcome_State" EntityType="Self.conf_Outcome_State" />
+    <EntitySet Name="conf_title" EntityType="Self.conf_title" />
+    <EntitySet Name="doctor_profile" EntityType="Self.doctor_profile" />
+    <EntitySet Name="Gynacologies" EntityType="Self.Gynacology" />
+    <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcome" />
+    <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" />
+    <EntitySet Name="patient_profile" EntityType="Self.patient_profile" />
+  </EntityContainer>
+</Schema>

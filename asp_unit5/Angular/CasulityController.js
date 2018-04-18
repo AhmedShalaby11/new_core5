@@ -12,7 +12,7 @@
                 //clear body
                 //
                 //append the dropdowns
-          $("#subdropdowns").append("<span>Parity #"+(i+1)+" <span><select runat='server' ID='DropDown_ChildNumber" + (i + 1) + "' class=' w-75 btn btn-default mt-3 mb-1' ><option>SELECT</option><option>Vaginal</option> <option>CS</option></select></br>");
+                $("#subdropdowns").append("<span>Parity #" + (i + 1) + " <span><select  runat='server' ID='DropDown_ChildNumber" + (i + 1) + "' class='ParityDrop w-75 btn btn-default mt-3 mb-1' ><option>SELECT</option><option>Vaginal</option> <option>CS</option></select></br>");
 
             }
         }
@@ -75,6 +75,11 @@
             }
         })
     }
+
+
+
+
+
 
     $scope.onload = function () 
     {

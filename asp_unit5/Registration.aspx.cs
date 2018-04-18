@@ -16,8 +16,8 @@ namespace asp_unit5
 
         protected void btn_Register_Click(object sender, EventArgs e)
         {
-            unit5Entities db = new unit5Entities();
-            doctor_profile dbProfile = new doctor_profile();
+            Entity.unit5Entities db = new Entity.unit5Entities();
+            Entity.doctor_profile dbProfile = new Entity.doctor_profile();
 
             //
             dbProfile.DoctorLocation = textbox_clinic.Text;

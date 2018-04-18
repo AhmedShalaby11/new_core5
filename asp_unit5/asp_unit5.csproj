@@ -170,49 +170,85 @@
     <Compile Include="Casulity.aspx.designer.cs">
       <DependentUpon>Casulity.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CasulityProfile.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Complicaiton.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_child_presentation.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_child_state.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_cs_indication.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_degree.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_Intervention.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_Outcome.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_Outcome_State.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="conf_title.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="C__EFMigrationsHistory.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
+    <Compile Include="Entity\CasulityProfile.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
     </Compile>
-    <Compile Include="doctor_profile.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
+    <Compile Include="Entity\Complicaiton.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_by.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_child_presentation.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_child_state.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_cs_indication.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_degree.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_GynaDisorder.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_Intervention.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_medicalDisorder.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_medicalObestetric.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_Outcome.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_Outcome_State.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\conf_title.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\C__EFMigrationsHistory.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\doctor_profile.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Gynacology.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\NeonatalOutcome.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\patient_diagnose.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\patient_profile.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\unit5Entity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unit5Entity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\unit5Entity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\unit5Entity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unit5Entity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Gynacology.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
     </Compile>
     <Compile Include="master1.Master.cs">
       <DependentUpon>master1.Master</DependentUpon>
@@ -221,18 +257,9 @@
     <Compile Include="master1.Master.designer.cs">
       <DependentUpon>master1.Master</DependentUpon>
     </Compile>
-    <Compile Include="NeonatalOutcome.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="patient_diagnose.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="patient_profile.cs">
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
@@ -240,21 +267,6 @@
     </Compile>
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Unit5Context.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Unit5Context.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Unit5Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Unit5Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Unit5Context.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Unit5Context.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -361,6 +373,16 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Entity\unit5Entity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>unit5Entity.edmx</DependentUpon>
+      <LastGenOutput>unit5Entity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entity\unit5Entity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>unit5Entity.edmx</DependentUpon>
+      <LastGenOutput>unit5Entity.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
@@ -494,6 +516,13 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <EntityDeploy Include="Entity\unit5Entity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>unit5Entity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entity\unit5Entity.edmx.diagram">
+      <DependentUpon>unit5Entity.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -514,17 +543,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Unit5Context.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Unit5Context.Context.cs</LastGenOutput>
-      <DependentUpon>Unit5Context.edmx</DependentUpon>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
     </Content>
-    <Content Include="Unit5Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Unit5Context.edmx</DependentUpon>
-      <LastGenOutput>Unit5Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -547,13 +568,6 @@
     <Content Include="Scripts\popper.min.js.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
-    <EntityDeploy Include="Unit5Context.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Unit5Context.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Unit5Context.edmx.diagram">
-      <DependentUpon>Unit5Context.edmx</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
