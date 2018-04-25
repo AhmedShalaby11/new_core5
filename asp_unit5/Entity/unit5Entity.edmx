@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="unit5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="unit5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__EFMigrationsHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -194,6 +194,7 @@
           <Property Name="Dynamics" Type="nvarchar(max)" />
           <Property Name="ICU" Type="nvarchar(max)" />
           <Property Name="Intervention" Type="nvarchar(max)" />
+          <Property Name="OtherIntervention" Type="nvarchar(max)" />
           <Property Name="NumberOfLivingFemale" Type="int" Nullable="false" />
           <Property Name="NumberOfLivingMale" Type="int" Nullable="false" />
           <Property Name="OperativeDate" Type="nvarchar(max)" />
@@ -210,6 +211,7 @@
           <Property Name="patientAge" Type="nvarchar(max)" />
           <Property Name="patientName" Type="nvarchar(max)" />
           <Property Name="ticketId" Type="nvarchar(max)" />
+          <Property Name="AdditionalNotes" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="NeonatalOutcome">
           <Key>
@@ -280,8 +282,7 @@
           <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="unit5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -490,6 +491,8 @@
           <Property Name="patientAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="patientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AdditionalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="NeonatalOutcome">
           <Key>
@@ -757,6 +760,8 @@
           <EntitySetMapping Name="Gynacologies">
             <EntityTypeMapping TypeName="unit5Model.Gynacology">
               <MappingFragment StoreEntitySet="Gynacology">
+                <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+                <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
                 <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />

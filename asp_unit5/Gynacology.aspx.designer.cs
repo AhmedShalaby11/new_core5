@@ -10,7 +10,7 @@
 namespace asp_unit5 {
     
     
-    public partial class Casulity {
+    public partial class Gynacology {
         
         /// <summary>
         /// textbox_PatientName control.
@@ -67,42 +67,6 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.TextBox textboxPlus;
         
         /// <summary>
-        /// DropDown_Diagnosis_Weeks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Weeks;
-        
-        /// <summary>
-        /// DropDown_Diagnosis_Days control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Days;
-        
-        /// <summary>
-        /// DropDown_Diagnosis_By control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_By;
-        
-        /// <summary>
-        /// byConfig control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource byConfig;
-        
-        /// <summary>
         /// DropDown_Diagnosis_Obstetric control.
         /// </summary>
         /// <remarks>
@@ -112,13 +76,13 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Obstetric;
         
         /// <summary>
-        /// obstetricConf control.
+        /// Gyna_Disorder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource obstetricConf;
+        protected global::System.Web.UI.WebControls.SqlDataSource Gyna_Disorder;
         
         /// <summary>
         /// DropDown_Diagnosis_Disorder control.
@@ -130,13 +94,112 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Disorder;
         
         /// <summary>
-        /// medicalDisorderConf control.
+        /// sql_data_table_MedicalDisorder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource medicalDisorderConf;
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_MedicalDisorder;
+        
+        /// <summary>
+        /// sql_data_table_ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_;
+        
+        /// <summary>
+        /// dropdown_parity1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity1;
+        
+        /// <summary>
+        /// dropdown_parity2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity2;
+        
+        /// <summary>
+        /// dropdown_parity3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity3;
+        
+        /// <summary>
+        /// dropdown_parity4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity4;
+        
+        /// <summary>
+        /// dropdown_parity5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity5;
+        
+        /// <summary>
+        /// dropdown_parity6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity6;
+        
+        /// <summary>
+        /// dropdown_parity7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity7;
+        
+        /// <summary>
+        /// dropdown_parity8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity8;
+        
+        /// <summary>
+        /// dropdown_parity9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity9;
+        
+        /// <summary>
+        /// dropdown_parity10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity10;
         
         /// <summary>
         /// DropDown_Diagnosis_Presentation control.
@@ -148,22 +211,13 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Presentation;
         
         /// <summary>
-        /// Presentation_CS control.
+        /// sql_data_table_Presentation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Presentation_CS;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_Presentation;
         
         /// <summary>
         /// DropDown_Diagnosis_State control.
@@ -175,13 +229,13 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_State;
         
         /// <summary>
-        /// State_CS control.
+        /// sql_data_table_State control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource State_CS;
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_State;
         
         /// <summary>
         /// textbox_LivingMale control.
@@ -202,22 +256,40 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.TextBox textbox_LivingFemale;
         
         /// <summary>
-        /// DropDown_cs_Indications control.
+        /// DateTime_OperativeDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDown_cs_Indications;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl DateTime_OperativeDate;
         
         /// <summary>
-        /// cs_Indications control.
+        /// DropDown_Intervention control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource cs_Indications;
+        protected global::System.Web.UI.WebControls.DropDownList DropDown_Intervention;
+        
+        /// <summary>
+        /// Intervention_WithoutOutcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource Intervention_WithoutOutcome;
+        
+        /// <summary>
+        /// DropDown_OtherIntervention control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDown_OtherIntervention;
         
         /// <summary>
         /// DropDown_Staff_Surgeon control.
@@ -229,13 +301,31 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList DropDown_Staff_Surgeon;
         
         /// <summary>
-        /// Doctor_Name_CS control.
+        /// sql_data_table_Doctors control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Doctor_Name_CS;
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_Doctors;
+        
+        /// <summary>
+        /// DropDown_Staff_Assistant control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDown_Staff_Assistant;
+        
+        /// <summary>
+        /// DropDown_Staff_Supervisor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDown_Staff_Supervisor;
         
         /// <summary>
         /// TextArea_Others_Notes control.

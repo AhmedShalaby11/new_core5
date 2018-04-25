@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/master1.Master" AutoEventWireup="true" CodeBehind="Casulity.aspx.cs" Inherits="asp_unit5.Casulity" %>
+﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/master1.Master" AutoEventWireup="true" CodeBehind="~/Gynacology.aspx.cs" Inherits="asp_unit5.Gynacology" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="Angular/CasulityController.js"></script>
@@ -9,7 +9,7 @@
         
         <div ng-controller="ngControllerCasulity" class="container" style="zoom: .9">
         <div class="row justify-content-lg-start">
-            <h3 class="display-4">Patient Portal</h3>
+            <h3 class="display-4">Patient Portal | Gynacology</h3>
 
         </div>
 
@@ -92,7 +92,7 @@
 
             </div>
 
-            <div class="col-auto">
+         <%--   <div class="col-auto">
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">Weeks</label>
 
@@ -104,7 +104,8 @@
                 </div>
 
             </div>
-            <div class="col-auto">
+         --%> 
+            <%--<div class="col-auto">
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">Days</label>
 
@@ -115,7 +116,8 @@
 
                 </div>
             </div>
-            <div class="col-auto">
+            --%>
+            <%--<div class="col-auto">
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">By </label>
 
@@ -128,17 +130,19 @@
 
                 </div>
             </div>
-            <div class="col-sm-2">
+            --%>
+            
+            <div class="col-sm-4">
                 <div style="text-align: left;" id="text4" class="form-group">
-                    <label for="forlabel">Obstetric Disorder </label>
+                    <label for="forlabel">Gynacological Disorder </label>
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_Obstetric" CssClass="btn-secondary btn  form-control border-dark" runat="server" DataTextField="element_name" DataValueField="element_name" DataSourceID="sql_data_table_Obestetric_Disorder">
+                    <asp:DropDownList ID="DropDown_Diagnosis_Obstetric" CssClass="btn-secondary btn  form-control border-dark" runat="server" DataTextField="element_name" DataValueField="element_name" DataSourceID="Gyna_Disorder">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
 
 
-                    <asp:SqlDataSource ID="sql_data_table_Obestetric_Disorder" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="Gyna_Disorder" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_GynaDisorder]"></asp:SqlDataSource>
 
 
                 </div>
@@ -161,7 +165,81 @@
                 </div>
             </div>
         </div>
+            <div class="row ml-5 justify-content-lg-center">
+                        <div ng-show="ng0ParityNumber" id="subdropdowns" class="row  justify-content-lg-center mb-4">
+            <div class="col-md-5">
+                <span>Parity #1 </span>
+                    <select runat='server' id='dropdown_parity1' class='border-dark  w-75 btn btn-default mt-3 mb-1'>
+                        <option>SELECT</option>
+                        <option>Vaginal</option>
+                        <option>CS</option>
+                    </select><br/>
+            <span>Parity #2 </span>
+                <select runat='server' id='dropdown_parity2' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                    <option>SELECT</option>
+                    <option>Vaginal</option>
+                    <option>CS</option>
+                </select><br/>
+            <span>Parity #3 </span>
+                <select runat='server' id='dropdown_parity3' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                    <option>SELECT</option>
+                    <option>Vaginal</option>
+                    <option>CS</option>
+                </select><br/>
+            <span>Parity #4 </span>
+                <select runat='server' id='dropdown_parity4' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                    <option>SELECT</option>
+                    <option>Vaginal</option>
+                    <option>CS</option>
+                </select><br/>
+           <span>Parity #5 </span>
+               <select runat='server' id='dropdown_parity5' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                   <option>SELECT</option>
+                   <option>Vaginal</option>
+                   <option>CS</option>
+               </select><br/>
 
+            </div>
+
+
+            <div class="col-md-5">
+                <span>Parity #6 </span>
+                    <select runat='server' id='dropdown_parity6' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                        <option>SELECT</option>
+                        <option>Vaginal</option>
+                        <option>CS</option>
+                    </select><br/>
+
+            <span>Parity #7 </span>
+                <select runat='server' id='dropdown_parity7' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                    <option>SELECT</option>
+                    <option>Vaginal</option>
+                    <option>CS</option>
+                </select><br/>
+            <span>Parity #8 </span>
+                <select runat='server' id='dropdown_parity8' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                    <option>SELECT</option>
+                    <option>Vaginal</option>
+                    <option>CS</option>
+                </select><br/>
+            <span>Parity #9 </span>
+                <select runat='server' id='dropdown_parity9' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                    <option>SELECT</option>
+                    <option>Vaginal</option>
+                    <option>CS</option>
+                </select><br/>
+            <span>Parity #10 </span>
+                <select runat='server' id='dropdown_parity10' class='border-dark w-75 btn btn-default mt-3 mb-1'>
+                    <option>SELECT</option>
+                    <option>Vaginal</option>
+                    <option>CS</option>
+                </select><br/>
+
+            </div>
+
+                </div>
+            <hr />
+            </div>
         
             <hr />
         <h5>For Baby</h5>
@@ -195,7 +273,7 @@
 
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div  class="col-sm-3">
                 <div class="form-group">
                     <label for="">Number of living Male</label>
                     <asp:TextBox CssClass="form-control border-dark" MaxLength="2" ID="textbox_LivingMale" runat="server" placeholder="# of living males"></asp:TextBox>
@@ -217,14 +295,40 @@
 
         
 
-        <div class="row  justify-content-start">
+        <div ng-show="show_intervention" class="row  justify-content-start">
 
-            
+                   <div class="col-auto">
+                <div class="form-group">
+                    <label for="">Opretive Date</label>
+
+                    <input runat="server" type="datetime-local" class="form-control border-dark " id="DateTime_OperativeDate" aria-describedby="" placeholder="">
+                    <small id="" class="form-text text-muted"></small>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                
             
                 <div style="text-align: left;" id="text5" class="form-group">
-                    <label for="forlabel">Indications </label>
+                    <label for="forlabel">Intervention </label>
 
-                    <asp:DropDownList ID="DropDown_cs_Indications" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server" DataTextField="cs_indication_name" DataValueField="cs_indication_name" DataSourceID="sql_data_table_Indications">
+                    <asp:DropDownList ID="DropDown_Intervention" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server" DataTextField="intervention_name" DataValueField="intervention_name" DataSourceID="Intervention_WithoutOutcome">
+                        <asp:ListItem>Select</asp:ListItem>
+
+                    </asp:DropDownList>
+
+                    <asp:SqlDataSource ID="Intervention_WithoutOutcome" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [intervention_name] FROM [conf_Intervention] Where Type = 'N'"></asp:SqlDataSource>
+
+                </div>
+            </div>
+            
+            <div class="col-auto">
+                
+            
+                <div style="text-align: left;" id="text5" class="form-group">
+                    <label for="forlabel">Other Intervention </label>
+
+                    <asp:DropDownList ID="DropDown_OtherIntervention" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server" DataTextField="intervention_name" DataValueField="intervention_name" DataSourceID="Intervention_WithoutOutcome">
                         <asp:ListItem>Select</asp:ListItem>
 
                     </asp:DropDownList>
@@ -233,29 +337,22 @@
 
 
 
-                    <asp:SqlDataSource ID="sql_data_table_Indications" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [cs_indication_name] FROM [conf_cs_indication]"></asp:SqlDataSource>
-
-
-
-
-
                 </div>
             </div>
 
-        </div>
+            </div>
 
 
 
 
 
 
-        <div class="justify-content-start row">
-        </div>
 
-        <h3 class="mt-3 mb-3 text-right text-dark text-left text-uppercase">Staff </h3>
+       <h3 class="mt-3 mb-3 text-right text-dark  text-uppercase">STAFF </h3>
         <hr />
-
-        <div class="justify-content-lg-start row">
+               
+ 
+           <div class="justify-content-lg-start row">
             <div class="col-sm-2">
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Surgeon</label>
@@ -271,7 +368,28 @@
 
                 </div>
             </div>
-           
+            <div ng-show="ng0Surgeon" class="col-sm-2">
+                <div style="text-align: left;" id="text5" class="form-group">
+                    <label for="forlabel">Assistant</label>
+
+                    <asp:DropDownList ID="DropDown_Staff_Assistant" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server"  DataTextField="doctor_name" DataValueField="doctor_name" DataSourceID="sql_data_table_Doctors">
+                        <asp:ListItem>Select</asp:ListItem>
+
+                    </asp:DropDownList>
+
+                </div>
+            </div>
+            <div ng-show="ng0Surgeon" class="col-sm-2">
+                <div style="text-align: left;" id="text5" class="form-group">
+                    <label for="forlabel">Supervisor</label>
+
+                    <asp:DropDownList ID="DropDown_Staff_Supervisor" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server" DataTextField="doctor_name" DataValueField="doctor_name" DataSourceID="sql_data_table_Doctors">
+                        <asp:ListItem>Select</asp:ListItem>
+
+                    </asp:DropDownList>
+
+                </div>
+            </div>
         </div>
         <h3 class="mt-3 mb-3 text-right text-dark text-left text-uppercase">Others </h3>
         <hr />
@@ -292,7 +410,7 @@
 
             </div>
 
-
+                </div>
 
     </div>
 

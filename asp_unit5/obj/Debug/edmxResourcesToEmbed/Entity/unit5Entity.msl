@@ -192,6 +192,8 @@
     <EntitySetMapping Name="Gynacologies">
       <EntityTypeMapping TypeName="unit5Model.Gynacology">
         <MappingFragment StoreEntitySet="Gynacology">
+          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+          <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
           <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />

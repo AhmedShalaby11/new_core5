@@ -189,6 +189,7 @@
     <Property Name="Dynamics" Type="nvarchar(max)" />
     <Property Name="ICU" Type="nvarchar(max)" />
     <Property Name="Intervention" Type="nvarchar(max)" />
+    <Property Name="OtherIntervention" Type="nvarchar(max)" />
     <Property Name="NumberOfLivingFemale" Type="int" Nullable="false" />
     <Property Name="NumberOfLivingMale" Type="int" Nullable="false" />
     <Property Name="OperativeDate" Type="nvarchar(max)" />
@@ -205,6 +206,7 @@
     <Property Name="patientAge" Type="nvarchar(max)" />
     <Property Name="patientName" Type="nvarchar(max)" />
     <Property Name="ticketId" Type="nvarchar(max)" />
+    <Property Name="AdditionalNotes" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="NeonatalOutcome">
     <Key>

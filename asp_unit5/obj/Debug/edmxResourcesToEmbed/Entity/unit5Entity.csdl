@@ -205,6 +205,8 @@
     <Property Name="patientAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="patientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="NeonatalOutcome">
     <Key>

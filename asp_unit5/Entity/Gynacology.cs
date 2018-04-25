@@ -43,5 +43,7 @@ namespace asp_unit5.Entity
         public string patientAge { get; set; }
         public string patientName { get; set; }
         public string ticketId { get; set; }
+        public string OtherIntervention { get; set; }
+        public string AdditionalNotes { get; set; }
     }
 }
