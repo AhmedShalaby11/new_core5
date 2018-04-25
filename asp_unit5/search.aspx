@@ -19,7 +19,7 @@
             <div class="col-sm-3">
                 <div class="form-group">
                     <label for="">Patient Name</label>
-                    <input ng-model="ng_patientname" type="text" class="form-control border-dark" placeholder="Full Name"></input>
+                    <input ng-model="ng_patientname" type="text" class="form-control border-dark" placeholder="الأسم Name "></input>
 
                     <small id="" class="form-text text-muted">Arabic or English - Not a case senstive</small>
                 </div>
@@ -43,7 +43,7 @@
            
                 <div class="form-group" ng-show="div_Search_Patient_info">
                     <label class="text-dark fa-lg" for="">Quick Filter</label>
-                    <input ng-model="key" type="text" class="form-control border-dark" placeholder="Type to filter"></input>
+                    <input ng-model="key" type="text" class=" form-control border-dark" placeholder="Type to filter"></input>
 
                     <small id="" class="form-text text-muted">Filtering all the page content</small>
                
