@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="unit5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="__EFMigrationsHistory">
+  <EntityType Name="C__EFMigrationsHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
     </Key>
     <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
   </EntityType>
-  <EntityType Name="CasulityProfile">
+  <EntityType Name="CasulityProfiles">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -22,7 +22,7 @@
     <Property Name="Outcome" Type="nvarchar(max)" />
     <Property Name="ParityValue" Type="nvarchar(max)" />
     <Property Name="Presentation" Type="nvarchar(max)" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="Sex" Type="nvarchar(max)" />
     <Property Name="State" Type="nvarchar(max)" />
     <Property Name="Supervisors" Type="nvarchar(max)" />
@@ -46,13 +46,28 @@
     <Property Name="InterventionDate" Type="nvarchar(max)" />
     <Property Name="AdditionalNotes" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="Clinical_Rounds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Insertion_date" Type="datetime" />
+    <Property Name="Lecture_date" Type="date" />
+    <Property Name="Time" Type="varchar" MaxLength="50" />
+    <Property Name="group" Type="nchar" MaxLength="10" />
+    <Property Name="Lecturer_id" Type="int" />
+    <Property Name="First_Subsitute_id" Type="int" />
+    <Property Name="Second_Subsitute_id" Type="int" />
+    <Property Name="Students_Flag" Type="nchar" MaxLength="10" />
+    <Property Name="Attended_flag" Type="nchar" MaxLength="10" />
+  </EntityType>
   <EntityType Name="Complicaitons">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" />
-    <Property Name="RecDate" Type="datetime2" Precision="7" />
+    <Property Name="RecDate" Type="datetime" />
     <Property Name="Type" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="conf_by">
@@ -68,14 +83,14 @@
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="presentation_name" Type="varchar" MaxLength="150" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
   </EntityType>
   <EntityType Name="conf_child_state">
     <Key>
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="state_name" Type="varchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="conf_cs_indication">
@@ -84,7 +99,7 @@
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="cs_indication_name" Type="varchar" MaxLength="150" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="Type" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="conf_degree">
@@ -93,7 +108,7 @@
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="degree_name" Type="varchar" MaxLength="100" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
   </EntityType>
   <EntityType Name="conf_GynaDisorder">
     <Key>
@@ -109,7 +124,7 @@
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="intervention_name" Type="varchar" MaxLength="150" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="Type" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="conf_medicalDisorder">
@@ -132,14 +147,14 @@
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Outcome_name" Type="varchar" MaxLength="150" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
   </EntityType>
   <EntityType Name="conf_Outcome_State">
     <Key>
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="state_name" Type="varchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="conf_title">
@@ -147,7 +162,7 @@
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="title_name" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="doctor_profile">
@@ -155,24 +170,24 @@
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="doctor_bach_year" Type="date" />
-    <Property Name="doctor_birthdate" Type="datetime2" Precision="0" />
+    <Property Name="doctor_bach_year" Type="datetime" />
+    <Property Name="doctor_birthdate" Type="datetime" />
     <Property Name="doctor_degree" Type="varchar" MaxLength="100" />
     <Property Name="doctor_image_URL" Type="varchar(max)" />
-    <Property Name="doctor_MCS_year" Type="date" />
+    <Property Name="doctor_MCS_year" Type="datetime" />
     <Property Name="doctor_name" Type="varchar" MaxLength="200" />
     <Property Name="doctor_other_degrees" Type="varchar(max)" />
     <Property Name="doctor_other_qualifications" Type="varchar(max)" />
-    <Property Name="doctor_PHD_year" Type="date" />
+    <Property Name="doctor_PHD_year" Type="datetime" />
     <Property Name="doctor_precense" Type="varchar" MaxLength="50" />
     <Property Name="doctor_title" Type="varchar" MaxLength="45" />
-    <Property Name="record_date" Type="datetime2" Precision="0" />
+    <Property Name="record_date" Type="datetime" />
     <Property Name="DoctorLocation" Type="nvarchar(max)" />
     <Property Name="DoctorMail" Type="nvarchar(max)" />
     <Property Name="DoctorMobile" Type="nvarchar(max)" />
     <Property Name="DoctorAcademicDegree" Type="nvarchar(max)" />
   </EntityType>
-  <EntityType Name="Gynacology">
+  <EntityType Name="Gynacologies">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -189,14 +204,13 @@
     <Property Name="Dynamics" Type="nvarchar(max)" />
     <Property Name="ICU" Type="nvarchar(max)" />
     <Property Name="Intervention" Type="nvarchar(max)" />
-    <Property Name="OtherIntervention" Type="nvarchar(max)" />
     <Property Name="NumberOfLivingFemale" Type="int" Nullable="false" />
     <Property Name="NumberOfLivingMale" Type="int" Nullable="false" />
     <Property Name="OperativeDate" Type="nvarchar(max)" />
     <Property Name="Outcome" Type="nvarchar(max)" />
     <Property Name="ParityValue" Type="nvarchar(max)" />
     <Property Name="Presentation" Type="nvarchar(max)" />
-    <Property Name="RecDate" Type="datetime2" Precision="7" />
+    <Property Name="RecDate" Type="datetime" />
     <Property Name="Sex" Type="nvarchar(max)" />
     <Property Name="State" Type="nvarchar(max)" />
     <Property Name="Supervisors" Type="nvarchar(max)" />
@@ -206,15 +220,29 @@
     <Property Name="patientAge" Type="nvarchar(max)" />
     <Property Name="patientName" Type="nvarchar(max)" />
     <Property Name="ticketId" Type="nvarchar(max)" />
+    <Property Name="OtherIntervention" Type="nvarchar(max)" />
     <Property Name="AdditionalNotes" Type="nvarchar(max)" />
   </EntityType>
-  <EntityType Name="NeonatalOutcome">
+  <EntityType Name="Lecture">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Insertion_Date" Type="datetime" />
+    <Property Name="Lectrurer_ID" Type="int" />
+    <Property Name="Subsitute_Id" Type="int" />
+    <Property Name="Topic" Type="text" />
+    <Property Name="Lecture_Date" Type="datetime" />
+    <Property Name="Attended_flag" Type="char" MaxLength="10" />
+    <Property Name="Students_Flag" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="NeonatalOutcomes">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" />
-    <Property Name="Recid" Type="datetime2" Precision="7" />
+    <Property Name="Recid" Type="datetime" />
     <Property Name="Type" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="patient_diagnose">
@@ -234,8 +262,8 @@
     <Property Name="Outcome_sex" Type="varchar(max)" />
     <Property Name="Outcome_State" Type="varchar(max)" />
     <Property Name="Outcome_weight" Type="float" />
-    <Property Name="Positive_date" Type="datetime2" Precision="0" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="Positive_date" Type="datetime" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="Supervisor" Type="varchar(max)" />
     <Property Name="Surgeon" Type="varchar(max)" />
   </EntityType>
@@ -246,18 +274,125 @@
     <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="patient_address" Type="varchar(max)" />
     <Property Name="patient_age" Type="float" />
-    <Property Name="patient_birthdate" Type="date" />
+    <Property Name="patient_birthdate" Type="datetime" />
     <Property Name="patient_contact" Type="varchar(max)" />
     <Property Name="patient_email" Type="varchar" MaxLength="45" />
     <Property Name="patient_id" Type="varchar(max)" />
     <Property Name="patient_image_url" Type="varchar(max)" />
     <Property Name="Patient_name" Type="varchar" MaxLength="200" />
     <Property Name="patient_sex" Type="varchar" MaxLength="20" />
-    <Property Name="rec_date" Type="datetime2" Precision="0" />
+    <Property Name="rec_date" Type="datetime" />
   </EntityType>
+  <EntityType Name="Research">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supervisor_1" Type="int" />
+    <Property Name="Supervisor_2" Type="int" Nullable="false" />
+    <Property Name="Researcher_id" Type="int" Nullable="false" />
+    <Property Name="Reasearch_Name" Type="text" />
+  </EntityType>
+  <Association Name="FK__Clinical___First__66603565">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
+    <End Role="Clinical_Rounds" Type="Self.Clinical_Rounds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Clinical_Rounds">
+        <PropertyRef Name="First_Subsitute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clinical___Lectu__656C112C">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
+    <End Role="Clinical_Rounds" Type="Self.Clinical_Rounds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Clinical_Rounds">
+        <PropertyRef Name="Lecturer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clinical___Secon__6754599E">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
+    <End Role="Clinical_Rounds" Type="Self.Clinical_Rounds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Clinical_Rounds">
+        <PropertyRef Name="Second_Subsitute_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lecture__Lectrur__59FA5E80">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
+    <End Role="Lecture" Type="Self.Lecture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Lecture">
+        <PropertyRef Name="Lectrurer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lecture__Subsitu__5AEE82B9">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
+    <End Role="Lecture" Type="Self.Lecture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Lecture">
+        <PropertyRef Name="Subsitute_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Research__Resear__60A75C0F">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="1" />
+    <End Role="Research" Type="Self.Research" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Research">
+        <PropertyRef Name="Researcher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Research__Superv__5EBF139D">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
+    <End Role="Research" Type="Self.Research" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Research">
+        <PropertyRef Name="Supervisor_1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Research__Superv__5FB337D6">
+    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="1" />
+    <End Role="Research" Type="Self.Research" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="doctor_profile">
+        <PropertyRef Name="recid" />
+      </Principal>
+      <Dependent Role="Research">
+        <PropertyRef Name="Supervisor_2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="unit5ModelStoreContainer">
-    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CasulityProfile" EntityType="Self.CasulityProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Complicaitons" EntityType="Self.Complicaitons" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="conf_by" EntityType="Self.conf_by" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="conf_child_presentation" EntityType="Self.conf_child_presentation" Schema="dbo" store:Type="Tables" />
@@ -272,9 +407,43 @@
     <EntitySet Name="conf_Outcome_State" EntityType="Self.conf_Outcome_State" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="conf_title" EntityType="Self.conf_title" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="doctor_profile" EntityType="Self.doctor_profile" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Gynacology" EntityType="Self.Gynacology" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="NeonatalOutcome" EntityType="Self.NeonatalOutcome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gynacologies" EntityType="Self.Gynacologies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lecture" EntityType="Self.Lecture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcomes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Research" EntityType="Self.Research" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Clinical___First__66603565" Association="Self.FK__Clinical___First__66603565">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Clinical_Rounds" EntitySet="Clinical_Rounds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clinical___Lectu__656C112C" Association="Self.FK__Clinical___Lectu__656C112C">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Clinical_Rounds" EntitySet="Clinical_Rounds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clinical___Secon__6754599E" Association="Self.FK__Clinical___Secon__6754599E">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Clinical_Rounds" EntitySet="Clinical_Rounds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lecture__Lectrur__59FA5E80" Association="Self.FK__Lecture__Lectrur__59FA5E80">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Lecture" EntitySet="Lecture" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lecture__Subsitu__5AEE82B9" Association="Self.FK__Lecture__Subsitu__5AEE82B9">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Lecture" EntitySet="Lecture" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Research__Resear__60A75C0F" Association="Self.FK__Research__Resear__60A75C0F">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Research" EntitySet="Research" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Research__Superv__5EBF139D" Association="Self.FK__Research__Superv__5EBF139D">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Research" EntitySet="Research" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Research__Superv__5FB337D6" Association="Self.FK__Research__Superv__5FB337D6">
+      <End Role="doctor_profile" EntitySet="doctor_profile" />
+      <End Role="Research" EntitySet="Research" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
