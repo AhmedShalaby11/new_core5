@@ -22,11 +22,20 @@
         <EntityTypeShape EntityType="unit5Model.conf_title" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.doctor_profile" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.Gynacology" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+<<<<<<< HEAD
         <EntityTypeShape EntityType="unit5Model.Lecture" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.NeonatalOutcome" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.patient_diagnose" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.patient_profile" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.Clinical_Rounds" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+=======
+        <EntityTypeShape EntityType="unit5Model.NeonatalOutcome" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Model.patient_diagnose" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Model.patient_profile" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Model.Lecture" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="unit5Model.Clinical_Rounds" Width="1.5" PointX="3.375" PointY="12.75" />
+        <EntityTypeShape EntityType="unit5Model.Research" Width="1.5" PointX="5.375" PointY="12.75" />
+>>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

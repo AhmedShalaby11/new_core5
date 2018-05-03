@@ -247,6 +247,9 @@
     <Compile Include="Entity\patient_profile.cs">
       <DependentUpon>unit5Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Research.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\unit5Entity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -304,12 +307,21 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Researchers.aspx.cs">
       <DependentUpon>Researchers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Researchers.aspx.designer.cs">
       <DependentUpon>Researchers.aspx</DependentUpon>
+=======
+    <Compile Include="Research.aspx.cs">
+      <DependentUpon>Research.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Research.aspx.designer.cs">
+      <DependentUpon>Research.aspx</DependentUpon>
+>>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
     </Compile>
     <Compile Include="search.aspx.cs">
       <DependentUpon>search.aspx</DependentUpon>
@@ -459,7 +471,11 @@
     <Content Include="Lectures_UnderGraduate.aspx" />
     <Content Include="Lecture_postGraduates.aspx" />
     <Content Include="Registration.aspx" />
+<<<<<<< HEAD
     <Content Include="Researchers.aspx" />
+=======
+    <Content Include="Research.aspx" />
+>>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />

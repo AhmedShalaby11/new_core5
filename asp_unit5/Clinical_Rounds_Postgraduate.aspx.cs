@@ -23,7 +23,7 @@ namespace asp_unit5
             CR.First_Subsitute_name = DropDown_firstSubstitute.Text.Trim().Replace("Select", "NA").Trim();
             CR.Second_Subsitute_name = DropDownList_secondsubstitue.Text.Trim().Replace("Select", "NA").Trim();
             CR.group = DropDownList_Group.Text.Trim().Replace("Select", "NA").Trim();
-            CR.Time = DropDownList_Time.Text.Trim().Replace("elect", "NA").Trim();
+            CR.Time = DropDownList_Time.Text.Trim().Replace("Select", "NA").Trim();
             CR.Student_flag = "P";
             try
             {
