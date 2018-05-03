@@ -290,5 +290,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Clinical_Rounds">
+      <EntityTypeMapping TypeName="unit5Model.Clinical_Rounds">
+        <MappingFragment StoreEntitySet="Clinical_Rounds">
+          <ScalarProperty Name="Student_flag" ColumnName="Student_flag" />
+          <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
+          <ScalarProperty Name="Second_Subsitute_name" ColumnName="Second_Subsitute_name" />
+          <ScalarProperty Name="First_Subsitute_name" ColumnName="First_Subsitute_name" />
+          <ScalarProperty Name="Lecturer_name" ColumnName="Lecturer_name" />
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Lecture_date" ColumnName="Lecture_date" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

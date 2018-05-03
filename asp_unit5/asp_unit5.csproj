@@ -175,6 +175,9 @@
     <Compile Include="Entity\CasulityProfile.cs">
       <DependentUpon>unit5Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Clinical_Rounds.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Complicaiton.cs">
       <DependentUpon>unit5Entity.tt</DependentUpon>
     </Compile>
@@ -298,6 +301,20 @@
     </Compile>
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clinical_Rounds_Postgraduate.aspx.cs">
+      <DependentUpon>Clinical_Rounds_Postgraduate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clinical_Rounds_Postgraduate.aspx.designer.cs">
+      <DependentUpon>Clinical_Rounds_Postgraduate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicalRounds_UnderGraduates.aspx.cs">
+      <DependentUpon>ClinicalRounds_UnderGraduates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClinicalRounds_UnderGraduates.aspx.designer.cs">
+      <DependentUpon>ClinicalRounds_UnderGraduates.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -552,6 +569,8 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <Content Include="Clinical_Rounds_Postgraduate.aspx" />
+    <Content Include="ClinicalRounds_UnderGraduates.aspx" />
     <EntityDeploy Include="Entity\unit5Entity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>unit5Entity.Designer.cs</LastGenOutput>

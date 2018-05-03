@@ -277,6 +277,7 @@
     <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" />
     <EntitySet Name="patient_profile" EntityType="Self.patient_profile" />
     <EntitySet Name="Lectures" EntityType="unit5Model.Lecture" />
+    <EntitySet Name="Clinical_Rounds" EntityType="unit5Model.Clinical_Rounds" />
   </EntityContainer>
   <EntityType Name="Lecture">
     <Key>
@@ -290,5 +291,20 @@
     <Property Name="Lecture_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Lecturer_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Substitute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Clinical_Rounds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rec_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lecture_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lecturer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="First_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Second_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

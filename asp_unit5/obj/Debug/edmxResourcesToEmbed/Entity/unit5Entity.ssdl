@@ -46,6 +46,21 @@
     <Property Name="InterventionDate" Type="nvarchar(max)" />
     <Property Name="AdditionalNotes" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="Clinical_Rounds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rec_date" Type="nvarchar(max)" />
+    <Property Name="Lecture_date" Type="nvarchar(max)" />
+    <Property Name="Time" Type="nvarchar(max)" />
+    <Property Name="group" Type="nvarchar(max)" />
+    <Property Name="Lecturer_name" Type="nvarchar(max)" />
+    <Property Name="First_Subsitute_name" Type="nvarchar(max)" />
+    <Property Name="Second_Subsitute_name" Type="nvarchar(max)" />
+    <Property Name="Attended_flag" Type="nvarchar(max)" />
+    <Property Name="Student_flag" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="Complicaitons">
     <Key>
       <PropertyRef Name="Id" />
@@ -271,6 +286,7 @@
   <EntityContainer Name="unit5ModelStoreContainer">
     <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Complicaitons" EntityType="Self.Complicaitons" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="conf_by" EntityType="Self.conf_by" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="conf_child_presentation" EntityType="Self.conf_child_presentation" Schema="dbo" store:Type="Tables" />
