@@ -45,8 +45,6 @@ namespace asp_unit5.Entity
         public virtual DbSet<NeonatalOutcome> NeonatalOutcomes { get; set; }
         public virtual DbSet<patient_diagnose> patient_diagnose { get; set; }
         public virtual DbSet<patient_profile> patient_profile { get; set; }
-        public virtual DbSet<Clinical_Rounds> Clinical_Rounds { get; set; }
         public virtual DbSet<Lecture> Lectures { get; set; }
-        public virtual DbSet<Research> Researches { get; set; }
     }
 }

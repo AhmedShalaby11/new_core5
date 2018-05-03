@@ -14,19 +14,6 @@ namespace asp_unit5.Entity
     
     public partial class doctor_profile
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public doctor_profile()
-        {
-            this.Clinical_Rounds = new HashSet<Clinical_Rounds>();
-            this.Clinical_Rounds1 = new HashSet<Clinical_Rounds>();
-            this.Clinical_Rounds2 = new HashSet<Clinical_Rounds>();
-            this.Lectures = new HashSet<Lecture>();
-            this.Lectures1 = new HashSet<Lecture>();
-            this.Researches = new HashSet<Research>();
-            this.Researches1 = new HashSet<Research>();
-            this.Researches2 = new HashSet<Research>();
-        }
-    
         public int recid { get; set; }
         public Nullable<System.DateTime> doctor_bach_year { get; set; }
         public Nullable<System.DateTime> doctor_birthdate { get; set; }
@@ -44,22 +31,5 @@ namespace asp_unit5.Entity
         public string DoctorMail { get; set; }
         public string DoctorMobile { get; set; }
         public string DoctorAcademicDegree { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Clinical_Rounds> Clinical_Rounds { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Clinical_Rounds> Clinical_Rounds1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Clinical_Rounds> Clinical_Rounds2 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lecture> Lectures { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lecture> Lectures1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Research> Researches { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Research> Researches1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Research> Researches2 { get; set; }
     }
 }

@@ -46,21 +46,6 @@
     <Property Name="InterventionDate" Type="nvarchar(max)" />
     <Property Name="AdditionalNotes" Type="nvarchar(max)" />
   </EntityType>
-  <EntityType Name="Clinical_Rounds">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Insertion_date" Type="datetime" />
-    <Property Name="Lecture_date" Type="date" />
-    <Property Name="Time" Type="varchar" MaxLength="50" />
-    <Property Name="group" Type="nchar" MaxLength="10" />
-    <Property Name="Lecturer_id" Type="int" />
-    <Property Name="First_Subsitute_id" Type="int" />
-    <Property Name="Second_Subsitute_id" Type="int" />
-    <Property Name="Students_Flag" Type="nchar" MaxLength="10" />
-    <Property Name="Attended_flag" Type="nchar" MaxLength="10" />
-  </EntityType>
   <EntityType Name="Complicaitons">
     <Key>
       <PropertyRef Name="Id" />
@@ -228,13 +213,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Insertion_Date" Type="datetime" />
-    <Property Name="Lectrurer_ID" Type="int" />
-    <Property Name="Subsitute_Id" Type="int" />
-    <Property Name="Topic" Type="text" />
-    <Property Name="Lecture_Date" Type="datetime" />
-    <Property Name="Attended_flag" Type="char" MaxLength="10" />
-    <Property Name="Students_Flag" Type="nchar" MaxLength="10" />
+    <Property Name="rec_date" Type="datetime" />
+    <Property Name="Topic" Type="nvarchar(max)" />
+    <Property Name="Attended_flag" Type="nvarchar(max)" />
+    <Property Name="Students_Flag" Type="nvarchar(max)" />
+    <Property Name="Lecture_Date" Type="nvarchar(max)" />
+    <Property Name="Lecturer_Name" Type="nvarchar(max)" />
+    <Property Name="Substitute_Name" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="NeonatalOutcomes">
     <Key>
@@ -283,116 +268,9 @@
     <Property Name="patient_sex" Type="varchar" MaxLength="20" />
     <Property Name="rec_date" Type="datetime" />
   </EntityType>
-  <EntityType Name="Research">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Supervisor_1" Type="int" />
-    <Property Name="Supervisor_2" Type="int" Nullable="false" />
-    <Property Name="Researcher_id" Type="int" Nullable="false" />
-    <Property Name="Reasearch_Name" Type="text" />
-  </EntityType>
-  <Association Name="FK__Clinical___First__66603565">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
-    <End Role="Clinical_Rounds" Type="Self.Clinical_Rounds" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Clinical_Rounds">
-        <PropertyRef Name="First_Subsitute_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Clinical___Lectu__656C112C">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
-    <End Role="Clinical_Rounds" Type="Self.Clinical_Rounds" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Clinical_Rounds">
-        <PropertyRef Name="Lecturer_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Clinical___Secon__6754599E">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
-    <End Role="Clinical_Rounds" Type="Self.Clinical_Rounds" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Clinical_Rounds">
-        <PropertyRef Name="Second_Subsitute_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Lecture__Lectrur__59FA5E80">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
-    <End Role="Lecture" Type="Self.Lecture" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Lecture">
-        <PropertyRef Name="Lectrurer_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Lecture__Subsitu__5AEE82B9">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
-    <End Role="Lecture" Type="Self.Lecture" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Lecture">
-        <PropertyRef Name="Subsitute_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Research__Resear__60A75C0F">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="1" />
-    <End Role="Research" Type="Self.Research" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Research">
-        <PropertyRef Name="Researcher_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Research__Superv__5EBF139D">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="0..1" />
-    <End Role="Research" Type="Self.Research" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Research">
-        <PropertyRef Name="Supervisor_1" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Research__Superv__5FB337D6">
-    <End Role="doctor_profile" Type="Self.doctor_profile" Multiplicity="1" />
-    <End Role="Research" Type="Self.Research" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="doctor_profile">
-        <PropertyRef Name="recid" />
-      </Principal>
-      <Dependent Role="Research">
-        <PropertyRef Name="Supervisor_2" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="unit5ModelStoreContainer">
     <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfiles" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Complicaitons" EntityType="Self.Complicaitons" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="conf_by" EntityType="Self.conf_by" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="conf_child_presentation" EntityType="Self.conf_child_presentation" Schema="dbo" store:Type="Tables" />
@@ -412,38 +290,5 @@
     <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcomes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Research" EntityType="Self.Research" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Clinical___First__66603565" Association="Self.FK__Clinical___First__66603565">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Clinical_Rounds" EntitySet="Clinical_Rounds" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Clinical___Lectu__656C112C" Association="Self.FK__Clinical___Lectu__656C112C">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Clinical_Rounds" EntitySet="Clinical_Rounds" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Clinical___Secon__6754599E" Association="Self.FK__Clinical___Secon__6754599E">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Clinical_Rounds" EntitySet="Clinical_Rounds" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Lecture__Lectrur__59FA5E80" Association="Self.FK__Lecture__Lectrur__59FA5E80">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Lecture" EntitySet="Lecture" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Lecture__Subsitu__5AEE82B9" Association="Self.FK__Lecture__Subsitu__5AEE82B9">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Lecture" EntitySet="Lecture" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Research__Resear__60A75C0F" Association="Self.FK__Research__Resear__60A75C0F">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Research" EntitySet="Research" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Research__Superv__5EBF139D" Association="Self.FK__Research__Superv__5EBF139D">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Research" EntitySet="Research" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Research__Superv__5FB337D6" Association="Self.FK__Research__Superv__5FB337D6">
-      <End Role="doctor_profile" EntitySet="doctor_profile" />
-      <End Role="Research" EntitySet="Research" />
-    </AssociationSet>
   </EntityContainer>
 </Schema>

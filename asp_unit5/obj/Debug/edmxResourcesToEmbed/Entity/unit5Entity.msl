@@ -276,43 +276,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Clinical_Rounds">
-      <EntityTypeMapping TypeName="unit5Model.Clinical_Rounds">
-        <MappingFragment StoreEntitySet="Clinical_Rounds">
-          <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
-          <ScalarProperty Name="Students_Flag" ColumnName="Students_Flag" />
-          <ScalarProperty Name="Second_Subsitute_id" ColumnName="Second_Subsitute_id" />
-          <ScalarProperty Name="First_Subsitute_id" ColumnName="First_Subsitute_id" />
-          <ScalarProperty Name="Lecturer_id" ColumnName="Lecturer_id" />
-          <ScalarProperty Name="group" ColumnName="group" />
-          <ScalarProperty Name="Time" ColumnName="Time" />
-          <ScalarProperty Name="Lecture_date" ColumnName="Lecture_date" />
-          <ScalarProperty Name="Insertion_date" ColumnName="Insertion_date" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Lectures">
       <EntityTypeMapping TypeName="unit5Model.Lecture">
         <MappingFragment StoreEntitySet="Lecture">
+          <ScalarProperty Name="Substitute_Name" ColumnName="Substitute_Name" />
+          <ScalarProperty Name="Lecturer_Name" ColumnName="Lecturer_Name" />
+          <ScalarProperty Name="Lecture_Date" ColumnName="Lecture_Date" />
           <ScalarProperty Name="Students_Flag" ColumnName="Students_Flag" />
           <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
-          <ScalarProperty Name="Lecture_Date" ColumnName="Lecture_Date" />
           <ScalarProperty Name="Topic" ColumnName="Topic" />
-          <ScalarProperty Name="Subsitute_Id" ColumnName="Subsitute_Id" />
-          <ScalarProperty Name="Lectrurer_ID" ColumnName="Lectrurer_ID" />
-          <ScalarProperty Name="Insertion_Date" ColumnName="Insertion_Date" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Researches">
-      <EntityTypeMapping TypeName="unit5Model.Research">
-        <MappingFragment StoreEntitySet="Research">
-          <ScalarProperty Name="Reasearch_Name" ColumnName="Reasearch_Name" />
-          <ScalarProperty Name="Researcher_id" ColumnName="Researcher_id" />
-          <ScalarProperty Name="Supervisor_2" ColumnName="Supervisor_2" />
-          <ScalarProperty Name="Supervisor_1" ColumnName="Supervisor_1" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

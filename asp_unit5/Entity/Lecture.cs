@@ -15,15 +15,12 @@ namespace asp_unit5.Entity
     public partial class Lecture
     {
         public int Id { get; set; }
-        public Nullable<System.DateTime> Insertion_Date { get; set; }
-        public Nullable<int> Lectrurer_ID { get; set; }
-        public Nullable<int> Subsitute_Id { get; set; }
+        public Nullable<System.DateTime> rec_date { get; set; }
         public string Topic { get; set; }
-        public Nullable<System.DateTime> Lecture_Date { get; set; }
         public string Attended_flag { get; set; }
         public string Students_Flag { get; set; }
-    
-        public virtual doctor_profile doctor_profile { get; set; }
-        public virtual doctor_profile doctor_profile1 { get; set; }
+        public string Lecture_Date { get; set; }
+        public string Lecturer_Name { get; set; }
+        public string Substitute_Name { get; set; }
     }
 }
