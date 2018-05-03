@@ -4,15 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="unit5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="C__EFMigrationsHistory">
+      <Schema Namespace="unit5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__EFMigrationsHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
           </Key>
           <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
         </EntityType>
-        <EntityType Name="CasulityProfiles">
+        <EntityType Name="CasulityProfile">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -27,7 +27,7 @@
           <Property Name="Outcome" Type="nvarchar(max)" />
           <Property Name="ParityValue" Type="nvarchar(max)" />
           <Property Name="Presentation" Type="nvarchar(max)" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
           <Property Name="Sex" Type="nvarchar(max)" />
           <Property Name="State" Type="nvarchar(max)" />
           <Property Name="Supervisors" Type="nvarchar(max)" />
@@ -40,7 +40,7 @@
           <Property Name="ticketId" Type="nvarchar(max)" />
           <Property Name="NumberOfLivingFemale" Type="nvarchar(max)" Nullable="false" />
           <Property Name="NumberOfLivingMale" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="AdmissionDate" Type="nvarchar(max)" />
+          <Property Name="AdmissionDate" Type="datetime2" Precision="7" />
           <Property Name="By" Type="nvarchar(max)" />
           <Property Name="Obstetric" Type="nvarchar(max)" />
           <Property Name="Disorder" Type="nvarchar(max)" />
@@ -48,16 +48,18 @@
           <Property Name="NeonatalCondition" Type="nvarchar(max)" />
           <Property Name="OtherIntervention" Type="nvarchar(max)" />
           <Property Name="Indications" Type="nvarchar(max)" />
-          <Property Name="InterventionDate" Type="nvarchar(max)" />
+          <Property Name="InterventionDate" Type="datetime2" Precision="7" />
           <Property Name="AdditionalNotes" Type="nvarchar(max)" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Clinical_Rounds">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="rec_date" Type="nvarchar(max)" />
-          <Property Name="Lecture_date" Type="nvarchar(max)" />
+          <Property Name="rec_date" Type="datetime" />
+          <Property Name="Lecture_date" Type="datetime" />
           <Property Name="Time" Type="nvarchar(max)" />
           <Property Name="group" Type="nvarchar(max)" />
           <Property Name="Lecturer_name" Type="nvarchar(max)" />
@@ -72,7 +74,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="RecDate" Type="datetime" />
+          <Property Name="RecDate" Type="datetime2" Precision="7" />
           <Property Name="Type" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="conf_by">
@@ -88,14 +90,14 @@
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="presentation_name" Type="varchar" MaxLength="150" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
         </EntityType>
         <EntityType Name="conf_child_state">
           <Key>
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
           <Property Name="state_name" Type="varchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="conf_cs_indication">
@@ -104,7 +106,7 @@
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="cs_indication_name" Type="varchar" MaxLength="150" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
           <Property Name="Type" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="conf_degree">
@@ -113,7 +115,7 @@
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="degree_name" Type="varchar" MaxLength="100" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
         </EntityType>
         <EntityType Name="conf_GynaDisorder">
           <Key>
@@ -129,7 +131,7 @@
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="intervention_name" Type="varchar" MaxLength="150" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
           <Property Name="Type" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="conf_medicalDisorder">
@@ -152,14 +154,14 @@
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Outcome_name" Type="varchar" MaxLength="150" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
         </EntityType>
         <EntityType Name="conf_Outcome_State">
           <Key>
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
           <Property Name="state_name" Type="varchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="conf_title">
@@ -167,7 +169,7 @@
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
           <Property Name="title_name" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="doctor_profile">
@@ -175,24 +177,24 @@
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="doctor_bach_year" Type="datetime" />
-          <Property Name="doctor_birthdate" Type="datetime" />
+          <Property Name="doctor_bach_year" Type="date" />
+          <Property Name="doctor_birthdate" Type="datetime2" Precision="0" />
           <Property Name="doctor_degree" Type="varchar" MaxLength="100" />
           <Property Name="doctor_image_URL" Type="varchar(max)" />
-          <Property Name="doctor_MCS_year" Type="datetime" />
+          <Property Name="doctor_MCS_year" Type="date" />
           <Property Name="doctor_name" Type="varchar" MaxLength="200" />
           <Property Name="doctor_other_degrees" Type="varchar(max)" />
           <Property Name="doctor_other_qualifications" Type="varchar(max)" />
-          <Property Name="doctor_PHD_year" Type="datetime" />
+          <Property Name="doctor_PHD_year" Type="date" />
           <Property Name="doctor_precense" Type="varchar" MaxLength="50" />
           <Property Name="doctor_title" Type="varchar" MaxLength="45" />
-          <Property Name="record_date" Type="datetime" />
+          <Property Name="record_date" Type="datetime2" Precision="0" />
           <Property Name="DoctorLocation" Type="nvarchar(max)" />
           <Property Name="DoctorMail" Type="nvarchar(max)" />
           <Property Name="DoctorMobile" Type="nvarchar(max)" />
           <Property Name="DoctorAcademicDegree" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="Gynacologies">
+        <EntityType Name="Gynacology">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -209,13 +211,15 @@
           <Property Name="Dynamics" Type="nvarchar(max)" />
           <Property Name="ICU" Type="nvarchar(max)" />
           <Property Name="Intervention" Type="nvarchar(max)" />
+          <Property Name="OtherIntervention" Type="nvarchar(max)" />
           <Property Name="NumberOfLivingFemale" Type="int" Nullable="false" />
           <Property Name="NumberOfLivingMale" Type="int" Nullable="false" />
           <Property Name="OperativeDate" Type="nvarchar(max)" />
+          <Property Name="EndOperativeDate" Type="nvarchar(max)" />
           <Property Name="Outcome" Type="nvarchar(max)" />
           <Property Name="ParityValue" Type="nvarchar(max)" />
           <Property Name="Presentation" Type="nvarchar(max)" />
-          <Property Name="RecDate" Type="datetime" />
+          <Property Name="RecDate" Type="datetime2" Precision="7" />
           <Property Name="Sex" Type="nvarchar(max)" />
           <Property Name="State" Type="nvarchar(max)" />
           <Property Name="Supervisors" Type="nvarchar(max)" />
@@ -225,10 +229,9 @@
           <Property Name="patientAge" Type="nvarchar(max)" />
           <Property Name="patientName" Type="nvarchar(max)" />
           <Property Name="ticketId" Type="nvarchar(max)" />
-          <Property Name="OtherIntervention" Type="nvarchar(max)" />
           <Property Name="AdditionalNotes" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="Lecture">
+        <EntityType Name="Lectures">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -237,17 +240,17 @@
           <Property Name="Topic" Type="nvarchar(max)" />
           <Property Name="Attended_flag" Type="nvarchar(max)" />
           <Property Name="Students_Flag" Type="nvarchar(max)" />
-          <Property Name="Lecture_Date" Type="nvarchar(max)" />
+          <Property Name="Lecture_Date" Type="datetime2" Precision="7" />
           <Property Name="Lecturer_Name" Type="nvarchar(max)" />
           <Property Name="Substitute_Name" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="NeonatalOutcomes">
+        <EntityType Name="NeonatalOutcome">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Recid" Type="datetime" />
+          <Property Name="Recid" Type="datetime2" Precision="7" />
           <Property Name="Type" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="patient_diagnose">
@@ -267,8 +270,8 @@
           <Property Name="Outcome_sex" Type="varchar(max)" />
           <Property Name="Outcome_State" Type="varchar(max)" />
           <Property Name="Outcome_weight" Type="float" />
-          <Property Name="Positive_date" Type="datetime" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="Positive_date" Type="datetime2" Precision="0" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
           <Property Name="Supervisor" Type="varchar(max)" />
           <Property Name="Surgeon" Type="varchar(max)" />
         </EntityType>
@@ -279,19 +282,18 @@
           <Property Name="recid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="patient_address" Type="varchar(max)" />
           <Property Name="patient_age" Type="float" />
-          <Property Name="patient_birthdate" Type="datetime" />
+          <Property Name="patient_birthdate" Type="date" />
           <Property Name="patient_contact" Type="varchar(max)" />
           <Property Name="patient_email" Type="varchar" MaxLength="45" />
           <Property Name="patient_id" Type="varchar(max)" />
           <Property Name="patient_image_url" Type="varchar(max)" />
           <Property Name="Patient_name" Type="varchar" MaxLength="200" />
           <Property Name="patient_sex" Type="varchar" MaxLength="20" />
-          <Property Name="rec_date" Type="datetime" />
+          <Property Name="rec_date" Type="datetime2" Precision="0" />
         </EntityType>
         <EntityContainer Name="unit5ModelStoreContainer">
-          <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfiles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CasulityProfile" EntityType="Self.CasulityProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Complicaitons" EntityType="Self.Complicaitons" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="conf_by" EntityType="Self.conf_by" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="conf_child_presentation" EntityType="Self.conf_child_presentation" Schema="dbo" store:Type="Tables" />
@@ -306,13 +308,28 @@
           <EntitySet Name="conf_Outcome_State" EntityType="Self.conf_Outcome_State" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="conf_title" EntityType="Self.conf_title" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="doctor_profile" EntityType="Self.doctor_profile" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Gynacologies" EntityType="Self.Gynacologies" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Lecture" EntityType="Self.Lecture" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcomes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gynacology" EntityType="Self.Gynacology" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lectures" EntityType="Self.Lectures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NeonatalOutcome" EntityType="Self.NeonatalOutcome" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Clinical_Rounds].[Id] AS [Id], 
+    [Clinical_Rounds].[rec_date] AS [rec_date], 
+    [Clinical_Rounds].[Lecture_date] AS [Lecture_date], 
+    [Clinical_Rounds].[Time] AS [Time], 
+    [Clinical_Rounds].[group] AS [group], 
+    [Clinical_Rounds].[Lecturer_name] AS [Lecturer_name], 
+    [Clinical_Rounds].[First_Subsitute_name] AS [First_Subsitute_name], 
+    [Clinical_Rounds].[Second_Subsitute_name] AS [Second_Subsitute_name], 
+    [Clinical_Rounds].[Attended_flag] AS [Attended_flag], 
+    [Clinical_Rounds].[Student_flag] AS [Student_flag]
+    FROM [dbo].[Clinical_Rounds] AS [Clinical_Rounds]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="unit5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -338,7 +355,7 @@
           <Property Name="Outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ParityValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Presentation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
           <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Supervisors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -351,7 +368,7 @@
           <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NumberOfLivingFemale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NumberOfLivingMale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="AdmissionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AdmissionDate" Type="DateTime" Precision="7" />
           <Property Name="By" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Obstetric" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Disorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -359,7 +376,7 @@
           <Property Name="NeonatalCondition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Indications" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="InterventionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InterventionDate" Type="DateTime" Precision="7" />
           <Property Name="AdditionalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Complicaiton">
@@ -368,7 +385,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="RecDate" Type="DateTime" Precision="3" />
+          <Property Name="RecDate" Type="DateTime" Precision="7" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="conf_by">
@@ -384,14 +401,14 @@
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="presentation_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="conf_child_state">
           <Key>
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
           <Property Name="state_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="conf_cs_indication">
@@ -400,7 +417,7 @@
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cs_indication_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="conf_degree">
@@ -409,7 +426,7 @@
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="degree_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="conf_GynaDisorder">
           <Key>
@@ -425,7 +442,7 @@
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="intervention_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="conf_medicalDisorder">
@@ -448,14 +465,14 @@
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Outcome_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="conf_Outcome_State">
           <Key>
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
           <Property Name="state_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="conf_title">
@@ -463,7 +480,7 @@
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
           <Property Name="title_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="doctor_profile">
@@ -471,18 +488,18 @@
             <PropertyRef Name="recid" />
           </Key>
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="doctor_bach_year" Type="DateTime" Precision="3" />
-          <Property Name="doctor_birthdate" Type="DateTime" Precision="3" />
+          <Property Name="doctor_bach_year" Type="DateTime" Precision="0" />
+          <Property Name="doctor_birthdate" Type="DateTime" Precision="0" />
           <Property Name="doctor_degree" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="doctor_image_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="doctor_MCS_year" Type="DateTime" Precision="3" />
+          <Property Name="doctor_MCS_year" Type="DateTime" Precision="0" />
           <Property Name="doctor_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="doctor_other_degrees" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="doctor_other_qualifications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="doctor_PHD_year" Type="DateTime" Precision="3" />
+          <Property Name="doctor_PHD_year" Type="DateTime" Precision="0" />
           <Property Name="doctor_precense" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="doctor_title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="record_date" Type="DateTime" Precision="3" />
+          <Property Name="record_date" Type="DateTime" Precision="0" />
           <Property Name="DoctorLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DoctorMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DoctorMobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -505,13 +522,15 @@
           <Property Name="Dynamics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ICU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Intervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NumberOfLivingFemale" Type="Int32" Nullable="false" />
           <Property Name="NumberOfLivingMale" Type="Int32" Nullable="false" />
           <Property Name="OperativeDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EndOperativeDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ParityValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Presentation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="RecDate" Type="DateTime" Precision="3" />
+          <Property Name="RecDate" Type="DateTime" Precision="7" />
           <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Supervisors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -521,8 +540,20 @@
           <Property Name="patientAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="patientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="AdditionalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Lecture">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="Topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Students_Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lecture_Date" Type="DateTime" Precision="7" />
+          <Property Name="Lecturer_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Substitute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="NeonatalOutcome">
           <Key>
@@ -530,7 +561,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Recid" Type="DateTime" Precision="3" />
+          <Property Name="Recid" Type="DateTime" Precision="7" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="patient_diagnose">
@@ -550,8 +581,8 @@
           <Property Name="Outcome_sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Outcome_State" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Outcome_weight" Type="Double" />
-          <Property Name="Positive_date" Type="DateTime" Precision="3" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="Positive_date" Type="DateTime" Precision="0" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
           <Property Name="Supervisor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Surgeon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -562,16 +593,31 @@
           <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="patient_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="patient_age" Type="Double" />
-          <Property Name="patient_birthdate" Type="DateTime" Precision="3" />
+          <Property Name="patient_birthdate" Type="DateTime" Precision="0" />
           <Property Name="patient_contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="patient_email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="patient_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="patient_image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Patient_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="patient_sex" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="rec_date" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityContainer Name="unit5Entities" annotation:LazyLoadingEnabled="true">
+        <EntityType Name="Clinical_Rounds">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rec_date" Type="DateTime" Precision="3" />
+          <Property Name="Lecture_date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lecturer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="First_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Second_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="unit5Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
           <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfile" />
           <EntitySet Name="Complicaitons" EntityType="Self.Complicaiton" />
@@ -589,353 +635,327 @@
           <EntitySet Name="conf_title" EntityType="Self.conf_title" />
           <EntitySet Name="doctor_profile" EntityType="Self.doctor_profile" />
           <EntitySet Name="Gynacologies" EntityType="Self.Gynacology" />
+          <EntitySet Name="Lectures" EntityType="Self.Lecture" />
           <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcome" />
           <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" />
           <EntitySet Name="patient_profile" EntityType="Self.patient_profile" />
-          <EntitySet Name="Lectures" EntityType="unit5Model.Lecture" />
-          <EntitySet Name="Clinical_Rounds" EntityType="unit5Model.Clinical_Rounds" />
+          <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" />
         </EntityContainer>
-        <EntityType Name="Lecture">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
-          <Property Name="Topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Students_Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Lecture_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Lecturer_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Substitute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Clinical_Rounds">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="rec_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Lecture_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Lecturer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="First_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Second_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="unit5ModelStoreContainer" CdmEntityContainer="unit5Entities">
-    <EntitySetMapping Name="C__EFMigrationsHistory">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.C__EFMigrationsHistory)">
-        <MappingFragment StoreEntitySet="C__EFMigrationsHistory">
-          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
-          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CasulityProfiles">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.CasulityProfile)">
-        <MappingFragment StoreEntitySet="CasulityProfiles">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
-          <ScalarProperty Name="Assistants" ColumnName="Assistants" />
-          <ScalarProperty Name="ChildState" ColumnName="ChildState" />
-          <ScalarProperty Name="Complications" ColumnName="Complications" />
-          <ScalarProperty Name="Days" ColumnName="Days" />
-          <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
-          <ScalarProperty Name="Intervention" ColumnName="Intervention" />
-          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
-          <ScalarProperty Name="ParityValue" ColumnName="ParityValue" />
-          <ScalarProperty Name="Presentation" ColumnName="Presentation" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-          <ScalarProperty Name="Sex" ColumnName="Sex" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="Supervisors" ColumnName="Supervisors" />
-          <ScalarProperty Name="Surgeons" ColumnName="Surgeons" />
-          <ScalarProperty Name="Weeks" ColumnName="Weeks" />
-          <ScalarProperty Name="Weight" ColumnName="Weight" />
-          <ScalarProperty Name="ICU" ColumnName="ICU" />
-          <ScalarProperty Name="patientAge" ColumnName="patientAge" />
-          <ScalarProperty Name="patientName" ColumnName="patientName" />
-          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
-          <ScalarProperty Name="NumberOfLivingFemale" ColumnName="NumberOfLivingFemale" />
-          <ScalarProperty Name="NumberOfLivingMale" ColumnName="NumberOfLivingMale" />
-          <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
-          <ScalarProperty Name="By" ColumnName="By" />
-          <ScalarProperty Name="Obstetric" ColumnName="Obstetric" />
-          <ScalarProperty Name="Disorder" ColumnName="Disorder" />
-          <ScalarProperty Name="AdditionalComplications" ColumnName="AdditionalComplications" />
-          <ScalarProperty Name="NeonatalCondition" ColumnName="NeonatalCondition" />
-          <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
-          <ScalarProperty Name="Indications" ColumnName="Indications" />
-          <ScalarProperty Name="InterventionDate" ColumnName="InterventionDate" />
-          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Complicaitons">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.Complicaiton)">
-        <MappingFragment StoreEntitySet="Complicaitons">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_by">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_by)">
-        <MappingFragment StoreEntitySet="conf_by">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="element_name" ColumnName="element_name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_child_presentation">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_child_presentation)">
-        <MappingFragment StoreEntitySet="conf_child_presentation">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="presentation_name" ColumnName="presentation_name" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_child_state">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_child_state)">
-        <MappingFragment StoreEntitySet="conf_child_state">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-          <ScalarProperty Name="state_name" ColumnName="state_name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_cs_indication">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_cs_indication)">
-        <MappingFragment StoreEntitySet="conf_cs_indication">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="cs_indication_name" ColumnName="cs_indication_name" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_degree">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_degree)">
-        <MappingFragment StoreEntitySet="conf_degree">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="degree_name" ColumnName="degree_name" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_GynaDisorder">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_GynaDisorder)">
-        <MappingFragment StoreEntitySet="conf_GynaDisorder">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="element_name" ColumnName="element_name" />
-          <ScalarProperty Name="element_type" ColumnName="element_type" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_Intervention">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_Intervention)">
-        <MappingFragment StoreEntitySet="conf_Intervention">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="intervention_name" ColumnName="intervention_name" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_medicalDisorder">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_medicalDisorder)">
-        <MappingFragment StoreEntitySet="conf_medicalDisorder">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="element_name" ColumnName="element_name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_medicalObestetric">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_medicalObestetric)">
-        <MappingFragment StoreEntitySet="conf_medicalObestetric">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="element_name" ColumnName="element_name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_Outcome">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_Outcome)">
-        <MappingFragment StoreEntitySet="conf_Outcome">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="Outcome_name" ColumnName="Outcome_name" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_Outcome_State">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_Outcome_State)">
-        <MappingFragment StoreEntitySet="conf_Outcome_State">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-          <ScalarProperty Name="state_name" ColumnName="state_name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="conf_title">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_title)">
-        <MappingFragment StoreEntitySet="conf_title">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-          <ScalarProperty Name="title_name" ColumnName="title_name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="doctor_profile">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.doctor_profile)">
-        <MappingFragment StoreEntitySet="doctor_profile">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="doctor_bach_year" ColumnName="doctor_bach_year" />
-          <ScalarProperty Name="doctor_birthdate" ColumnName="doctor_birthdate" />
-          <ScalarProperty Name="doctor_degree" ColumnName="doctor_degree" />
-          <ScalarProperty Name="doctor_image_URL" ColumnName="doctor_image_URL" />
-          <ScalarProperty Name="doctor_MCS_year" ColumnName="doctor_MCS_year" />
-          <ScalarProperty Name="doctor_name" ColumnName="doctor_name" />
-          <ScalarProperty Name="doctor_other_degrees" ColumnName="doctor_other_degrees" />
-          <ScalarProperty Name="doctor_other_qualifications" ColumnName="doctor_other_qualifications" />
-          <ScalarProperty Name="doctor_PHD_year" ColumnName="doctor_PHD_year" />
-          <ScalarProperty Name="doctor_precense" ColumnName="doctor_precense" />
-          <ScalarProperty Name="doctor_title" ColumnName="doctor_title" />
-          <ScalarProperty Name="record_date" ColumnName="record_date" />
-          <ScalarProperty Name="DoctorLocation" ColumnName="DoctorLocation" />
-          <ScalarProperty Name="DoctorMail" ColumnName="DoctorMail" />
-          <ScalarProperty Name="DoctorMobile" ColumnName="DoctorMobile" />
-          <ScalarProperty Name="DoctorAcademicDegree" ColumnName="DoctorAcademicDegree" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Gynacologies">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.Gynacology)">
-        <MappingFragment StoreEntitySet="Gynacologies">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
-          <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
-          <ScalarProperty Name="Assistants" ColumnName="Assistants" />
-          <ScalarProperty Name="ChildState" ColumnName="ChildState" />
-          <ScalarProperty Name="Complications" ColumnName="Complications" />
-          <ScalarProperty Name="Days" ColumnName="Days" />
-          <ScalarProperty Name="DischargeDiagnoses" ColumnName="DischargeDiagnoses" />
-          <ScalarProperty Name="DischargeFollowupPlan" ColumnName="DischargeFollowupPlan" />
-          <ScalarProperty Name="DischargeSummary" ColumnName="DischargeSummary" />
-          <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
-          <ScalarProperty Name="ICU" ColumnName="ICU" />
-          <ScalarProperty Name="Intervention" ColumnName="Intervention" />
-          <ScalarProperty Name="NumberOfLivingFemale" ColumnName="NumberOfLivingFemale" />
-          <ScalarProperty Name="NumberOfLivingMale" ColumnName="NumberOfLivingMale" />
-          <ScalarProperty Name="OperativeDate" ColumnName="OperativeDate" />
-          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
-          <ScalarProperty Name="ParityValue" ColumnName="ParityValue" />
-          <ScalarProperty Name="Presentation" ColumnName="Presentation" />
-          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
-          <ScalarProperty Name="Sex" ColumnName="Sex" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="Supervisors" ColumnName="Supervisors" />
-          <ScalarProperty Name="Surgeons" ColumnName="Surgeons" />
-          <ScalarProperty Name="Weeks" ColumnName="Weeks" />
-          <ScalarProperty Name="Weight" ColumnName="Weight" />
-          <ScalarProperty Name="patientAge" ColumnName="patientAge" />
-          <ScalarProperty Name="patientName" ColumnName="patientName" />
-          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
-          <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
-          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NeonatalOutcomes">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.NeonatalOutcome)">
-        <MappingFragment StoreEntitySet="NeonatalOutcomes">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Recid" ColumnName="Recid" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="patient_diagnose">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.patient_diagnose)">
-        <MappingFragment StoreEntitySet="patient_diagnose">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="Assistant" ColumnName="Assistant" />
-          <ScalarProperty Name="child_Presentation" ColumnName="child_Presentation" />
-          <ScalarProperty Name="child_state" ColumnName="child_state" />
-          <ScalarProperty Name="Complications" ColumnName="Complications" />
-          <ScalarProperty Name="cs_indication" ColumnName="cs_indication" />
-          <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
-          <ScalarProperty Name="GA" ColumnName="GA" />
-          <ScalarProperty Name="Intervention" ColumnName="Intervention" />
-          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
-          <ScalarProperty Name="Outcome_sex" ColumnName="Outcome_sex" />
-          <ScalarProperty Name="Outcome_State" ColumnName="Outcome_State" />
-          <ScalarProperty Name="Outcome_weight" ColumnName="Outcome_weight" />
-          <ScalarProperty Name="Positive_date" ColumnName="Positive_date" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-          <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
-          <ScalarProperty Name="Surgeon" ColumnName="Surgeon" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="patient_profile">
-      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.patient_profile)">
-        <MappingFragment StoreEntitySet="patient_profile">
-          <ScalarProperty Name="recid" ColumnName="recid" />
-          <ScalarProperty Name="patient_address" ColumnName="patient_address" />
-          <ScalarProperty Name="patient_age" ColumnName="patient_age" />
-          <ScalarProperty Name="patient_birthdate" ColumnName="patient_birthdate" />
-          <ScalarProperty Name="patient_contact" ColumnName="patient_contact" />
-          <ScalarProperty Name="patient_email" ColumnName="patient_email" />
-          <ScalarProperty Name="patient_id" ColumnName="patient_id" />
-          <ScalarProperty Name="patient_image_url" ColumnName="patient_image_url" />
-          <ScalarProperty Name="Patient_name" ColumnName="Patient_name" />
-          <ScalarProperty Name="patient_sex" ColumnName="patient_sex" />
-          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="unit5ModelStoreContainer" CdmEntityContainer="unit5Entities1">
+          <EntitySetMapping Name="C__EFMigrationsHistory">
+            <EntityTypeMapping TypeName="unit5Model.C__EFMigrationsHistory">
+              <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CasulityProfiles">
+            <EntityTypeMapping TypeName="unit5Model.CasulityProfile">
+              <MappingFragment StoreEntitySet="CasulityProfile">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
+                <ScalarProperty Name="Assistants" ColumnName="Assistants" />
+                <ScalarProperty Name="ChildState" ColumnName="ChildState" />
+                <ScalarProperty Name="Complications" ColumnName="Complications" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
+                <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+                <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+                <ScalarProperty Name="ParityValue" ColumnName="ParityValue" />
+                <ScalarProperty Name="Presentation" ColumnName="Presentation" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Supervisors" ColumnName="Supervisors" />
+                <ScalarProperty Name="Surgeons" ColumnName="Surgeons" />
+                <ScalarProperty Name="Weeks" ColumnName="Weeks" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="ICU" ColumnName="ICU" />
+                <ScalarProperty Name="patientAge" ColumnName="patientAge" />
+                <ScalarProperty Name="patientName" ColumnName="patientName" />
+                <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+                <ScalarProperty Name="NumberOfLivingFemale" ColumnName="NumberOfLivingFemale" />
+                <ScalarProperty Name="NumberOfLivingMale" ColumnName="NumberOfLivingMale" />
+                <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
+                <ScalarProperty Name="By" ColumnName="By" />
+                <ScalarProperty Name="Obstetric" ColumnName="Obstetric" />
+                <ScalarProperty Name="Disorder" ColumnName="Disorder" />
+                <ScalarProperty Name="AdditionalComplications" ColumnName="AdditionalComplications" />
+                <ScalarProperty Name="NeonatalCondition" ColumnName="NeonatalCondition" />
+                <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
+                <ScalarProperty Name="Indications" ColumnName="Indications" />
+                <ScalarProperty Name="InterventionDate" ColumnName="InterventionDate" />
+                <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Complicaitons">
+            <EntityTypeMapping TypeName="unit5Model.Complicaiton">
+              <MappingFragment StoreEntitySet="Complicaitons">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_by">
+            <EntityTypeMapping TypeName="unit5Model.conf_by">
+              <MappingFragment StoreEntitySet="conf_by">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="element_name" ColumnName="element_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_child_presentation">
+            <EntityTypeMapping TypeName="unit5Model.conf_child_presentation">
+              <MappingFragment StoreEntitySet="conf_child_presentation">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="presentation_name" ColumnName="presentation_name" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_child_state">
+            <EntityTypeMapping TypeName="unit5Model.conf_child_state">
+              <MappingFragment StoreEntitySet="conf_child_state">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="state_name" ColumnName="state_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_cs_indication">
+            <EntityTypeMapping TypeName="unit5Model.conf_cs_indication">
+              <MappingFragment StoreEntitySet="conf_cs_indication">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="cs_indication_name" ColumnName="cs_indication_name" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_degree">
+            <EntityTypeMapping TypeName="unit5Model.conf_degree">
+              <MappingFragment StoreEntitySet="conf_degree">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="degree_name" ColumnName="degree_name" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_GynaDisorder">
+            <EntityTypeMapping TypeName="unit5Model.conf_GynaDisorder">
+              <MappingFragment StoreEntitySet="conf_GynaDisorder">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="element_name" ColumnName="element_name" />
+                <ScalarProperty Name="element_type" ColumnName="element_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_Intervention">
+            <EntityTypeMapping TypeName="unit5Model.conf_Intervention">
+              <MappingFragment StoreEntitySet="conf_Intervention">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="intervention_name" ColumnName="intervention_name" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_medicalDisorder">
+            <EntityTypeMapping TypeName="unit5Model.conf_medicalDisorder">
+              <MappingFragment StoreEntitySet="conf_medicalDisorder">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="element_name" ColumnName="element_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_medicalObestetric">
+            <EntityTypeMapping TypeName="unit5Model.conf_medicalObestetric">
+              <MappingFragment StoreEntitySet="conf_medicalObestetric">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="element_name" ColumnName="element_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_Outcome">
+            <EntityTypeMapping TypeName="unit5Model.conf_Outcome">
+              <MappingFragment StoreEntitySet="conf_Outcome">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="Outcome_name" ColumnName="Outcome_name" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_Outcome_State">
+            <EntityTypeMapping TypeName="unit5Model.conf_Outcome_State">
+              <MappingFragment StoreEntitySet="conf_Outcome_State">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="state_name" ColumnName="state_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conf_title">
+            <EntityTypeMapping TypeName="unit5Model.conf_title">
+              <MappingFragment StoreEntitySet="conf_title">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="title_name" ColumnName="title_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="doctor_profile">
+            <EntityTypeMapping TypeName="unit5Model.doctor_profile">
+              <MappingFragment StoreEntitySet="doctor_profile">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="doctor_bach_year" ColumnName="doctor_bach_year" />
+                <ScalarProperty Name="doctor_birthdate" ColumnName="doctor_birthdate" />
+                <ScalarProperty Name="doctor_degree" ColumnName="doctor_degree" />
+                <ScalarProperty Name="doctor_image_URL" ColumnName="doctor_image_URL" />
+                <ScalarProperty Name="doctor_MCS_year" ColumnName="doctor_MCS_year" />
+                <ScalarProperty Name="doctor_name" ColumnName="doctor_name" />
+                <ScalarProperty Name="doctor_other_degrees" ColumnName="doctor_other_degrees" />
+                <ScalarProperty Name="doctor_other_qualifications" ColumnName="doctor_other_qualifications" />
+                <ScalarProperty Name="doctor_PHD_year" ColumnName="doctor_PHD_year" />
+                <ScalarProperty Name="doctor_precense" ColumnName="doctor_precense" />
+                <ScalarProperty Name="doctor_title" ColumnName="doctor_title" />
+                <ScalarProperty Name="record_date" ColumnName="record_date" />
+                <ScalarProperty Name="DoctorLocation" ColumnName="DoctorLocation" />
+                <ScalarProperty Name="DoctorMail" ColumnName="DoctorMail" />
+                <ScalarProperty Name="DoctorMobile" ColumnName="DoctorMobile" />
+                <ScalarProperty Name="DoctorAcademicDegree" ColumnName="DoctorAcademicDegree" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gynacologies">
+            <EntityTypeMapping TypeName="unit5Model.Gynacology">
+              <MappingFragment StoreEntitySet="Gynacology">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
+                <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
+                <ScalarProperty Name="Assistants" ColumnName="Assistants" />
+                <ScalarProperty Name="ChildState" ColumnName="ChildState" />
+                <ScalarProperty Name="Complications" ColumnName="Complications" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="DischargeDiagnoses" ColumnName="DischargeDiagnoses" />
+                <ScalarProperty Name="DischargeFollowupPlan" ColumnName="DischargeFollowupPlan" />
+                <ScalarProperty Name="DischargeSummary" ColumnName="DischargeSummary" />
+                <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
+                <ScalarProperty Name="ICU" ColumnName="ICU" />
+                <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+                <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
+                <ScalarProperty Name="NumberOfLivingFemale" ColumnName="NumberOfLivingFemale" />
+                <ScalarProperty Name="NumberOfLivingMale" ColumnName="NumberOfLivingMale" />
+                <ScalarProperty Name="OperativeDate" ColumnName="OperativeDate" />
+                <ScalarProperty Name="EndOperativeDate" ColumnName="EndOperativeDate" />
+                <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+                <ScalarProperty Name="ParityValue" ColumnName="ParityValue" />
+                <ScalarProperty Name="Presentation" ColumnName="Presentation" />
+                <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Supervisors" ColumnName="Supervisors" />
+                <ScalarProperty Name="Surgeons" ColumnName="Surgeons" />
+                <ScalarProperty Name="Weeks" ColumnName="Weeks" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="patientAge" ColumnName="patientAge" />
+                <ScalarProperty Name="patientName" ColumnName="patientName" />
+                <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+                <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Lectures">
             <EntityTypeMapping TypeName="unit5Model.Lecture">
-              <MappingFragment StoreEntitySet="Lecture">
-                <ScalarProperty Name="Substitute_Name" ColumnName="Substitute_Name" />
-                <ScalarProperty Name="Lecturer_Name" ColumnName="Lecturer_Name" />
-                <ScalarProperty Name="Lecture_Date" ColumnName="Lecture_Date" />
-                <ScalarProperty Name="Students_Flag" ColumnName="Students_Flag" />
-                <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
-                <ScalarProperty Name="Topic" ColumnName="Topic" />
-                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+              <MappingFragment StoreEntitySet="Lectures">
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="Topic" ColumnName="Topic" />
+                <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
+                <ScalarProperty Name="Students_Flag" ColumnName="Students_Flag" />
+                <ScalarProperty Name="Lecture_Date" ColumnName="Lecture_Date" />
+                <ScalarProperty Name="Lecturer_Name" ColumnName="Lecturer_Name" />
+                <ScalarProperty Name="Substitute_Name" ColumnName="Substitute_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NeonatalOutcomes">
+            <EntityTypeMapping TypeName="unit5Model.NeonatalOutcome">
+              <MappingFragment StoreEntitySet="NeonatalOutcome">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Recid" ColumnName="Recid" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="patient_diagnose">
+            <EntityTypeMapping TypeName="unit5Model.patient_diagnose">
+              <MappingFragment StoreEntitySet="patient_diagnose">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="Assistant" ColumnName="Assistant" />
+                <ScalarProperty Name="child_Presentation" ColumnName="child_Presentation" />
+                <ScalarProperty Name="child_state" ColumnName="child_state" />
+                <ScalarProperty Name="Complications" ColumnName="Complications" />
+                <ScalarProperty Name="cs_indication" ColumnName="cs_indication" />
+                <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
+                <ScalarProperty Name="GA" ColumnName="GA" />
+                <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+                <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+                <ScalarProperty Name="Outcome_sex" ColumnName="Outcome_sex" />
+                <ScalarProperty Name="Outcome_State" ColumnName="Outcome_State" />
+                <ScalarProperty Name="Outcome_weight" ColumnName="Outcome_weight" />
+                <ScalarProperty Name="Positive_date" ColumnName="Positive_date" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+                <ScalarProperty Name="Surgeon" ColumnName="Surgeon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="patient_profile">
+            <EntityTypeMapping TypeName="unit5Model.patient_profile">
+              <MappingFragment StoreEntitySet="patient_profile">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="patient_address" ColumnName="patient_address" />
+                <ScalarProperty Name="patient_age" ColumnName="patient_age" />
+                <ScalarProperty Name="patient_birthdate" ColumnName="patient_birthdate" />
+                <ScalarProperty Name="patient_contact" ColumnName="patient_contact" />
+                <ScalarProperty Name="patient_email" ColumnName="patient_email" />
+                <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+                <ScalarProperty Name="patient_image_url" ColumnName="patient_image_url" />
+                <ScalarProperty Name="Patient_name" ColumnName="Patient_name" />
+                <ScalarProperty Name="patient_sex" ColumnName="patient_sex" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Clinical_Rounds">
             <EntityTypeMapping TypeName="unit5Model.Clinical_Rounds">
               <MappingFragment StoreEntitySet="Clinical_Rounds">
-                <ScalarProperty Name="Student_flag" ColumnName="Student_flag" />
-                <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
-                <ScalarProperty Name="Second_Subsitute_name" ColumnName="Second_Subsitute_name" />
-                <ScalarProperty Name="First_Subsitute_name" ColumnName="First_Subsitute_name" />
-                <ScalarProperty Name="Lecturer_name" ColumnName="Lecturer_name" />
-                <ScalarProperty Name="group" ColumnName="group" />
-                <ScalarProperty Name="Time" ColumnName="Time" />
-                <ScalarProperty Name="Lecture_date" ColumnName="Lecture_date" />
-                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="Lecture_date" ColumnName="Lecture_date" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="group" ColumnName="group" />
+                <ScalarProperty Name="Lecturer_name" ColumnName="Lecturer_name" />
+                <ScalarProperty Name="First_Subsitute_name" ColumnName="First_Subsitute_name" />
+                <ScalarProperty Name="Second_Subsitute_name" ColumnName="Second_Subsitute_name" />
+                <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
+                <ScalarProperty Name="Student_flag" ColumnName="Student_flag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          </EntityContainerMapping>
-</Mapping></edmx:Mappings>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -949,7 +969,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

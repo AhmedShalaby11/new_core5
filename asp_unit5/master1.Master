@@ -30,9 +30,9 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+  <div style="zoom:.80" class="collapse navbar-collapse" id="navbarTogglerDemo01">
     
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
             <li class="nav-item">
         <a class="text-center text-white text-uppercase nav-link" href="Registration.aspx">New Profile</a>
       </li>
@@ -46,6 +46,29 @@
           <li class="nav-item">
         <a class="text-center text-white text-uppercase  nav-link" href="search.aspx">Search</a>
       </li>
+
+           <li class="nav-item">
+        <a class="text-center text-white text-uppercase  nav-link" href="Lectures_UnderGraduate.aspx">Research | Undergrad</a>
+      </li>
+           <li class="nav-item">
+        <a class="text-center text-white text-uppercase  nav-link" href="Lecture_postGraduates.aspx">Research | Postgrad</a>
+      </li>
+
+    
+
+            <li class="nav-item">
+        <a class="text-center text-white text-uppercase  nav-link" href="Clinical_Rounds_Postgraduate.aspx">Clinical | Postgrad</a>
+      </li>
+             <li class="nav-item">
+        <a class="text-center text-white text-uppercase  nav-link" href="ClinicalRounds_UnderGraduates.aspx">Clinical | Undergrad</a>
+      </li>
+
+            <li class="nav-item">
+        <a class="text-center text-white text-uppercase  nav-link" href="ClinicalScheduels.aspx">Clinical | Schedules</a>
+      </li>
+                <li class="nav-item">
+        <a class="text-center text-white text-uppercase  nav-link" href="Researchers.aspx">Researcher Schedule</a>
+      </li>
     </ul>
 
        <ul class="nav navbar-nav navbar-right">
@@ -56,6 +79,7 @@
  
   </div>
 </nav>
+
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

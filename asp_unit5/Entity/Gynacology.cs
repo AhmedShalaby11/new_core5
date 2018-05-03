@@ -27,9 +27,11 @@ namespace asp_unit5.Entity
         public string Dynamics { get; set; }
         public string ICU { get; set; }
         public string Intervention { get; set; }
+        public string OtherIntervention { get; set; }
         public int NumberOfLivingFemale { get; set; }
         public int NumberOfLivingMale { get; set; }
         public string OperativeDate { get; set; }
+        public string EndOperativeDate { get; set; }
         public string Outcome { get; set; }
         public string ParityValue { get; set; }
         public string Presentation { get; set; }
@@ -43,7 +45,6 @@ namespace asp_unit5.Entity
         public string patientAge { get; set; }
         public string patientName { get; set; }
         public string ticketId { get; set; }
-        public string OtherIntervention { get; set; }
         public string AdditionalNotes { get; set; }
     }
 }

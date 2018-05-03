@@ -16,9 +16,9 @@ namespace asp_unit5
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            Entity.unit5Entities db = new Entity.unit5Entities();
+            Entity.unit5Entities1 db = new Entity.unit5Entities1();
             Entity.Clinical_Rounds CR = new Entity.Clinical_Rounds();
-            CR.Lecture_date = DateTime_Lecutre.Value;
+            CR.Lecture_date = DateTime.Parse(DateTime_Lecutre.Value);
             CR.Lecturer_name = DropDown_Lecturer.Text.Trim().Replace("Select", "NA").Trim();
             CR.First_Subsitute_name = DropDown_firstSubstitute.Text.Trim().Replace("Select", "NA").Trim();
             CR.Second_Subsitute_name = DropDownList_secondsubstitue.Text.Trim().Replace("Select", "NA").Trim();

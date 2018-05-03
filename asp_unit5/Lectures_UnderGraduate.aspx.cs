@@ -17,9 +17,9 @@ namespace asp_unit5
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
 
-            Entity.unit5Entities db = new Entity.unit5Entities();
+            Entity.unit5Entities1 db = new Entity.unit5Entities1();
             Entity.Lecture lecture = new Entity.Lecture();
-            lecture.Lecture_Date = DateTime_Lecutre.Value;
+            lecture.Lecture_Date = DateTime.Parse(DateTime_Lecutre.Value);
             lecture.Lecturer_Name = DropDown_Lecturer.Text.Trim().Replace("Select", "NA").Trim();
             lecture.Substitute_Name = DropDown_Substitute.Text.Trim().Replace("Select", "NA").Trim();
             lecture.Topic = textbox_Topic.Text.Trim();

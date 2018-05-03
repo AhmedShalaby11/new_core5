@@ -1,13 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master1.Master" AutoEventWireup="true" CodeBehind="Lecture_postGraduates.aspx.cs" Inherits="asp_unit5.Lecture_postGraduates" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div ng-controller="ngLecturesCasulity" class="container" style="zoom: .9">
-        <div class="row justify-content-lg-start">
-            <h3 class="display-4">Patient Portal | UnderGradutes Lectures</h3>
+    <div class="container">
+          <div class="container row justify-content-lg-start">
+            <h3 class="display-4">Patient Portal | Postgraduates Lectures</h3>
         </div>
      
         <hr />
+    <div class="container" style="zoom: .9">
+      
         <div class="row justify-content-center">   
             <div class="col-auto">
     <div class="form-group">
@@ -47,10 +50,10 @@
             </div>
 
         </div>
-        
-        <div class="row justify-content-center mb-5">
+       <div class="row justify-content-center mb-5">
             <asp:Button  runat="server" CssClass="align-content-center btn btn-danger w-25" Text="Submit" OnClick="Unnamed1_Click" />
 
             </div>
+        </div>
         </div>
 </asp:Content>

@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/30/2018 00:29:34
--- Generated from EDMX file: C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\Entity\unit5Entity.edmx
+-- Date Created: 05/03/2018 17:01:13
+-- Generated from EDMX file: C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\Entity\unit5Entity.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -27,6 +27,9 @@ IF OBJECT_ID(N'[dbo].[C__EFMigrationsHistory]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[CasulityProfiles]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CasulityProfiles];
+GO
+IF OBJECT_ID(N'[dbo].[Clinical_Rounds]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Clinical_Rounds];
 GO
 IF OBJECT_ID(N'[dbo].[Complicaitons]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Complicaitons];
@@ -72,6 +75,9 @@ IF OBJECT_ID(N'[dbo].[doctor_profile]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Gynacologies]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Gynacologies];
+GO
+IF OBJECT_ID(N'[dbo].[Lecture]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Lecture];
 GO
 IF OBJECT_ID(N'[dbo].[NeonatalOutcomes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[NeonatalOutcomes];
@@ -342,6 +348,34 @@ CREATE TABLE [dbo].[patient_profile] (
 );
 GO
 
+-- Creating table 'Lectures'
+CREATE TABLE [dbo].[Lectures] (
+    [Id] int  NOT NULL,
+    [rec_date] datetime  NULL,
+    [Topic] nvarchar(max)  NULL,
+    [Attended_flag] nvarchar(max)  NULL,
+    [Students_Flag] nvarchar(max)  NULL,
+    [Lecture_Date] nvarchar(max)  NULL,
+    [Lecturer_Name] nvarchar(max)  NULL,
+    [Substitute_Name] nvarchar(max)  NULL
+);
+GO
+
+-- Creating table 'Clinical_Rounds'
+CREATE TABLE [dbo].[Clinical_Rounds] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [rec_date] nvarchar(max)  NULL,
+    [Lecture_date] nvarchar(max)  NULL,
+    [Time] nvarchar(max)  NULL,
+    [group] nvarchar(max)  NULL,
+    [Lecturer_name] nvarchar(max)  NULL,
+    [First_Subsitute_name] nvarchar(max)  NULL,
+    [Second_Subsitute_name] nvarchar(max)  NULL,
+    [Attended_flag] nvarchar(max)  NULL,
+    [Student_flag] nvarchar(max)  NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -464,6 +498,18 @@ GO
 ALTER TABLE [dbo].[patient_profile]
 ADD CONSTRAINT [PK_patient_profile]
     PRIMARY KEY CLUSTERED ([recid] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'Lectures'
+ALTER TABLE [dbo].[Lectures]
+ADD CONSTRAINT [PK_Lectures]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'Clinical_Rounds'
+ALTER TABLE [dbo].[Clinical_Rounds]
+ADD CONSTRAINT [PK_Clinical_Rounds]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- --------------------------------------------------

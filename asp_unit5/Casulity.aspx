@@ -131,7 +131,7 @@
 
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-auto">
                 <div style="text-align: left;" id="text4" class="form-group">
                     <label for="forlabel">Obstetric Disorder </label>
 
@@ -147,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-2">
+            <div class="col-auto">
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Medical Disorder </label>
 
@@ -241,7 +241,7 @@
         <h5>For Baby</h5>
         <div class="mt-3 row justify-content-lg-start">
 
-            <div class="col-sm-2">
+            <div class="col-auto">
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Presentation </label>
 
@@ -254,7 +254,7 @@
 
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-auto">
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">State </label>
 
@@ -302,7 +302,7 @@
 
             <div class="row justify-content-start mb-3">
                 <h5>Intervention Category</h5>
-                <div class="col-sm-2 ">
+                <div class="col-auto ">
 
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Intervention </label>
@@ -317,7 +317,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-2 ">
+                <div class="col-auto ">
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Complications </label>
 
@@ -356,7 +356,7 @@
 
                 <h5 ng-show="showIntervention_With_Outcome">For Outcome</h5>
 
-                <div ng-show="showIntervention_With_Outcome" class="col-sm-2 ml-3">
+                <div ng-show="showIntervention_With_Outcome" class="col-auto ml-3">
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Outcome </label>
 
@@ -375,7 +375,7 @@
                 </div>
 
 
-                <div class="col-sm-2">
+                <div class="col-auto">
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Sex </label>
 
@@ -390,7 +390,7 @@
 
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-auto">
                     <div style="text-align: left;" id="text5" class="form-group">
                         <label for="forlabel">Neonatal Condition </label>
 
@@ -461,7 +461,7 @@
         <hr />
 
         <div class="justify-content-lg-start row">
-            <div class="col-sm-2">
+            <div class="col-auto">
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Surgeon</label>
 
@@ -476,7 +476,7 @@
 
                 </div>
             </div>
-            <div ng-show="ng0Surgeon" class="col-sm-2">
+            <div ng-show="ng0Surgeon" class="col-auto">
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Assistant</label>
 
@@ -487,7 +487,7 @@
 
                 </div>
             </div>
-            <div ng-show="ng0Surgeon" class="col-sm-2">
+            <div ng-show="ng0Surgeon" class="col-auto">
                 <div style="text-align: left;" id="text5" class="form-group">
                     <label for="forlabel">Supervisor</label>
 

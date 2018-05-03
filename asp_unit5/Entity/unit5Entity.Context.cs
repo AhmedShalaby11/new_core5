@@ -13,10 +13,10 @@ namespace asp_unit5.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class unit5Entities : DbContext
+    public partial class unit5Entities1 : DbContext
     {
-        public unit5Entities()
-            : base("name=unit5Entities")
+        public unit5Entities1()
+            : base("name=unit5Entities1")
         {
         }
     
@@ -42,10 +42,10 @@ namespace asp_unit5.Entity
         public virtual DbSet<conf_title> conf_title { get; set; }
         public virtual DbSet<doctor_profile> doctor_profile { get; set; }
         public virtual DbSet<Gynacology> Gynacologies { get; set; }
+        public virtual DbSet<Lecture> Lectures { get; set; }
         public virtual DbSet<NeonatalOutcome> NeonatalOutcomes { get; set; }
         public virtual DbSet<patient_diagnose> patient_diagnose { get; set; }
         public virtual DbSet<patient_profile> patient_profile { get; set; }
-        public virtual DbSet<Lecture> Lectures { get; set; }
         public virtual DbSet<Clinical_Rounds> Clinical_Rounds { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace asp_unit5
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            Entity.unit5Entities db  = new Entity.unit5Entities();
+            Entity.unit5Entities1 db  = new Entity.unit5Entities1();
             Entity.CasulityProfile casulity = new Entity.CasulityProfile();
 
             ///insert ( mapping )
@@ -34,7 +34,7 @@ namespace asp_unit5
             casulity.patientName = textbox_PatientName.Text.Trim();
             casulity.patientAge = DropDown_PatientAge.Text.Trim();
             casulity.ticketId = textbox_TicketNumber.Text.Trim();
-            casulity.AdmissionDate = Date_AdmissionDate.Value;
+            casulity.AdmissionDate = DateTime.Parse(Date_AdmissionDate.Value);
             
             casulity.ParityValue = textbox_Parity.Text.Trim();
             casulity.AddedValue = textboxPlus.Text.Trim();
@@ -62,7 +62,7 @@ namespace asp_unit5
             casulity.ChildState = DropDown_Diagnosis_State.Text.Trim().Replace("Select", "NA").Trim();
             casulity.NumberOfLivingMale = textbox_LivingMale.Text.Trim();
             casulity.NumberOfLivingFemale = textbox_LivingFemale.Text.Trim();
-            casulity.InterventionDate = Date_InterventionDate.Value;
+            casulity.InterventionDate = DateTime.Parse(Date_InterventionDate.Value);
             casulity.Intervention = DropDown_Intervention_InterventionSelection.Text.Trim().Replace("Select", "NA").Trim();
             casulity.Complications = DropDown_Intervention_Complications.Text.Trim().Replace("Select", "NA").Trim();
             casulity.AdditionalComplications = DropDown_Intervention_ExtraComplications.Text.Trim().Replace("Select", "NA").Trim();

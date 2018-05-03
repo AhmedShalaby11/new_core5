@@ -15,8 +15,8 @@ namespace asp_unit5.Entity
     public partial class Clinical_Rounds
     {
         public int Id { get; set; }
-        public string rec_date { get; set; }
-        public string Lecture_date { get; set; }
+        public Nullable<System.DateTime> rec_date { get; set; }
+        public Nullable<System.DateTime> Lecture_date { get; set; }
         public string Time { get; set; }
         public string group { get; set; }
         public string Lecturer_name { get; set; }

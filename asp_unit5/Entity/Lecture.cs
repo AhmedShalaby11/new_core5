@@ -19,7 +19,7 @@ namespace asp_unit5.Entity
         public string Topic { get; set; }
         public string Attended_flag { get; set; }
         public string Students_Flag { get; set; }
-        public string Lecture_Date { get; set; }
+        public Nullable<System.DateTime> Lecture_Date { get; set; }
         public string Lecturer_Name { get; set; }
         public string Substitute_Name { get; set; }
     }
