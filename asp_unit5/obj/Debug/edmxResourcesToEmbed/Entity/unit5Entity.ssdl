@@ -51,7 +51,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="rec_date" Type="nvarchar(max)" />
+    <Property Name="rec_date" Type="datetime" />
     <Property Name="Lecture_date" Type="nvarchar(max)" />
     <Property Name="Time" Type="nvarchar(max)" />
     <Property Name="group" Type="nvarchar(max)" />
@@ -283,6 +283,23 @@
     <Property Name="patient_sex" Type="varchar" MaxLength="20" />
     <Property Name="rec_date" Type="datetime" />
   </EntityType>
+  <EntityType Name="Research">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Super1" Type="nvarchar(max)" />
+    <Property Name="Super2" Type="nvarchar(max)" />
+    <Property Name="Super3" Type="nvarchar(max)" />
+    <Property Name="Super4" Type="nvarchar(max)" />
+    <Property Name="Super5" Type="nvarchar(max)" />
+    <Property Name="Researcher_Staff" Type="nvarchar(max)" />
+    <Property Name="Researcher_External" Type="nvarchar(max)" />
+    <Property Name="Research_Title" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="Registration_date" Type="datetime" />
+    <Property Name="Rec_id" Type="datetime" />
+  </EntityType>
   <EntityContainer Name="unit5ModelStoreContainer">
     <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfiles" Schema="dbo" store:Type="Tables" />
@@ -306,5 +323,6 @@
     <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcomes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Research" EntityType="Self.Research" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

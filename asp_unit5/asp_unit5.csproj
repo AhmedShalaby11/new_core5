@@ -238,6 +238,9 @@
     <Compile Include="Entity\patient_profile.cs">
       <DependentUpon>unit5Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Research.cs">
+      <DependentUpon>unit5Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\unit5Entity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -294,6 +297,13 @@
     </Compile>
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Research.aspx.cs">
+      <DependentUpon>Research.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Research.aspx.designer.cs">
+      <DependentUpon>Research.aspx</DependentUpon>
     </Compile>
     <Compile Include="search.aspx.cs">
       <DependentUpon>search.aspx</DependentUpon>
@@ -440,6 +450,7 @@
     <Content Include="Lectures_UnderGraduate.aspx" />
     <Content Include="Lecture_postGraduates.aspx" />
     <Content Include="Registration.aspx" />
+    <Content Include="Research.aspx" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />

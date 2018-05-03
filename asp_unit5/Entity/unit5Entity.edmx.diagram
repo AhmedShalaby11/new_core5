@@ -27,6 +27,7 @@
         <EntityTypeShape EntityType="unit5Model.patient_profile" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.Lecture" Width="1.5" PointX="0.75" PointY="12.75" />
         <EntityTypeShape EntityType="unit5Model.Clinical_Rounds" Width="1.5" PointX="3.375" PointY="12.75" />
+        <EntityTypeShape EntityType="unit5Model.Research" Width="1.5" PointX="5.375" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

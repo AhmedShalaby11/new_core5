@@ -278,6 +278,7 @@
     <EntitySet Name="patient_profile" EntityType="Self.patient_profile" />
     <EntitySet Name="Lectures" EntityType="unit5Model.Lecture" />
     <EntitySet Name="Clinical_Rounds" EntityType="unit5Model.Clinical_Rounds" />
+    <EntitySet Name="Researches" EntityType="unit5Model.Research" />
   </EntityContainer>
   <EntityType Name="Lecture">
     <Key>
@@ -297,7 +298,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="rec_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="Lecture_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -306,5 +307,22 @@
     <Property Name="Second_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Research">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Super1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Super2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Super3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Super4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Super5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Researcher_Staff" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Researcher_External" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Research_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Registration_date" Type="DateTime" Precision="3" />
+    <Property Name="Rec_id" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

@@ -56,7 +56,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="rec_date" Type="nvarchar(max)" />
+          <Property Name="rec_date" Type="datetime" />
           <Property Name="Lecture_date" Type="nvarchar(max)" />
           <Property Name="Time" Type="nvarchar(max)" />
           <Property Name="group" Type="nvarchar(max)" />
@@ -288,6 +288,23 @@
           <Property Name="patient_sex" Type="varchar" MaxLength="20" />
           <Property Name="rec_date" Type="datetime" />
         </EntityType>
+        <EntityType Name="Research">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Super1" Type="nvarchar(max)" />
+          <Property Name="Super2" Type="nvarchar(max)" />
+          <Property Name="Super3" Type="nvarchar(max)" />
+          <Property Name="Super4" Type="nvarchar(max)" />
+          <Property Name="Super5" Type="nvarchar(max)" />
+          <Property Name="Researcher_Staff" Type="nvarchar(max)" />
+          <Property Name="Researcher_External" Type="nvarchar(max)" />
+          <Property Name="Research_Title" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="Registration_date" Type="datetime" />
+          <Property Name="Rec_id" Type="datetime" />
+        </EntityType>
         <EntityContainer Name="unit5ModelStoreContainer">
           <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfiles" Schema="dbo" store:Type="Tables" />
@@ -311,6 +328,7 @@
           <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcomes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Research" EntityType="Self.Research" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -594,6 +612,7 @@
           <EntitySet Name="patient_profile" EntityType="Self.patient_profile" />
           <EntitySet Name="Lectures" EntityType="unit5Model.Lecture" />
           <EntitySet Name="Clinical_Rounds" EntityType="unit5Model.Clinical_Rounds" />
+          <EntitySet Name="Researches" EntityType="unit5Model.Research" />
         </EntityContainer>
         <EntityType Name="Lecture">
           <Key>
@@ -613,7 +632,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="rec_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rec_date" Type="DateTime" Precision="3" />
           <Property Name="Lecture_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -622,6 +641,23 @@
           <Property Name="Second_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Research">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Super1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Super2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Super3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Super4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Super5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Researcher_Staff" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Researcher_External" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Research_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Registration_date" Type="DateTime" Precision="3" />
+          <Property Name="Rec_id" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -930,6 +966,24 @@
                 <ScalarProperty Name="Time" ColumnName="Time" />
                 <ScalarProperty Name="Lecture_date" ColumnName="Lecture_date" />
                 <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Researches">
+            <EntityTypeMapping TypeName="unit5Model.Research">
+              <MappingFragment StoreEntitySet="Research">
+                <ScalarProperty Name="Rec_id" ColumnName="Rec_id" />
+                <ScalarProperty Name="Registration_date" ColumnName="Registration_date" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Research_Title" ColumnName="Research_Title" />
+                <ScalarProperty Name="Researcher_External" ColumnName="Researcher_External" />
+                <ScalarProperty Name="Researcher_Staff" ColumnName="Researcher_Staff" />
+                <ScalarProperty Name="Super5" ColumnName="Super5" />
+                <ScalarProperty Name="Super4" ColumnName="Super4" />
+                <ScalarProperty Name="Super3" ColumnName="Super3" />
+                <ScalarProperty Name="Super2" ColumnName="Super2" />
+                <ScalarProperty Name="Super1" ColumnName="Super1" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
