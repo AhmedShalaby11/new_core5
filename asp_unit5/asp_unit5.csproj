@@ -454,6 +454,7 @@
     <Content Include="Global.asax" />
     <Content Include="Gynacology.aspx" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Content Include="js\bootstrap-datetimepicker.js" />
     <Content Include="js\bootstrap-datetimepicker.min.js" />
     <Content Include="js\locales\bootstrap-datetimepicker.ar.js" />
@@ -506,6 +507,10 @@
     <Content Include="Lectures_UnderGraduate.aspx" />
     <Content Include="Lecture_postGraduates.aspx" />
 >>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
+=======
+    <Content Include="Lectures_UnderGraduate.aspx" />
+    <Content Include="Lecture_postGraduates.aspx" />
+>>>>>>> master
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />

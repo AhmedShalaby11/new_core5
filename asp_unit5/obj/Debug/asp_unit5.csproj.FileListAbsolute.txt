@@ -21,4 +21,7 @@ C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\bin\asp_unit5.pdb
 C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\obj\Debug\asp_unit5.dll
 C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\obj\Debug\asp_unit5.pdb
 C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\obj\Debug\asp_unit5.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 >>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
+=======
+>>>>>>> master

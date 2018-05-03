@@ -5,6 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Diagram DiagramId="a9099e1c0b80485ba2361d508a339083" Name="Diagram1">
         <EntityTypeShape EntityType="unit5Entity.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Entity.CasulityProfile" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
@@ -27,6 +28,8 @@
         <EntityTypeShape EntityType="unit5Entity.patient_diagnose" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Entity.patient_profile" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
 =======
+=======
+>>>>>>> master
       <Diagram DiagramId="b77da8b0d28840999a84ab442945a76e" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="unit5Model.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.CasulityProfile" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
@@ -50,7 +53,10 @@
         <EntityTypeShape EntityType="unit5Model.patient_profile" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.Lecture" Width="1.5" PointX="0.75" PointY="12.75" />
         <EntityTypeShape EntityType="unit5Model.Clinical_Rounds" Width="1.5" PointX="3.375" PointY="12.75" />
+<<<<<<< HEAD
 >>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
+=======
+>>>>>>> master
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
