@@ -26,7 +26,7 @@ namespace asp_unit5
             dbProfile.DoctorMobile = textbox_mobile.Text;
             //
             dbProfile.DoctorAcademicDegree = Select_AcademicDegree.Text;
-            dbProfile.doctor_degree = Select_Degree.Text;
+            //dbProfile.doctor_degree = Select_Degree.Text;
             dbProfile.doctor_precense = Select_DoctorPresence.Text;
             dbProfile.doctor_title = Select_Title.Text;
             //

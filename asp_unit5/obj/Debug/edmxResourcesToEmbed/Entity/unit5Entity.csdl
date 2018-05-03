@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="unit5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="unit5Entity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="C__EFMigrationsHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
@@ -22,7 +22,7 @@
     <Property Name="Outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ParityValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Presentation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Supervisors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -35,7 +35,7 @@
     <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="NumberOfLivingFemale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NumberOfLivingMale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="AdmissionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AdmissionDate" Type="DateTime" Precision="7" />
     <Property Name="By" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Obstetric" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Disorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -43,7 +43,7 @@
     <Property Name="NeonatalCondition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Indications" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="InterventionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InterventionDate" Type="DateTime" Precision="7" />
     <Property Name="AdditionalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Complicaiton">
@@ -52,7 +52,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="RecDate" Type="DateTime" Precision="7" />
+    <Property Name="RecDate" Type="DateTime" Precision="3" />
     <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="conf_by">
@@ -68,14 +68,14 @@
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="presentation_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="conf_child_state">
     <Key>
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="state_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="conf_cs_indication">
@@ -84,7 +84,7 @@
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="cs_indication_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="conf_degree">
@@ -93,7 +93,7 @@
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="degree_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="conf_GynaDisorder">
     <Key>
@@ -109,7 +109,7 @@
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="intervention_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="conf_medicalDisorder">
@@ -132,14 +132,14 @@
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Outcome_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="conf_Outcome_State">
     <Key>
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="state_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="conf_title">
@@ -147,7 +147,7 @@
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="title_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="doctor_profile">
@@ -155,18 +155,18 @@
       <PropertyRef Name="recid" />
     </Key>
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="doctor_bach_year" Type="DateTime" Precision="0" />
-    <Property Name="doctor_birthdate" Type="DateTime" Precision="0" />
+    <Property Name="doctor_bach_year" Type="DateTime" Precision="3" />
+    <Property Name="doctor_birthdate" Type="DateTime" Precision="3" />
     <Property Name="doctor_degree" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="doctor_image_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="doctor_MCS_year" Type="DateTime" Precision="0" />
+    <Property Name="doctor_MCS_year" Type="DateTime" Precision="3" />
     <Property Name="doctor_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="doctor_other_degrees" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="doctor_other_qualifications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="doctor_PHD_year" Type="DateTime" Precision="0" />
+    <Property Name="doctor_PHD_year" Type="DateTime" Precision="3" />
     <Property Name="doctor_precense" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="doctor_title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="record_date" Type="DateTime" Precision="0" />
+    <Property Name="record_date" Type="DateTime" Precision="3" />
     <Property Name="DoctorLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="DoctorMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="DoctorMobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -189,13 +189,15 @@
     <Property Name="Dynamics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ICU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Intervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="NumberOfLivingFemale" Type="Int32" Nullable="false" />
     <Property Name="NumberOfLivingMale" Type="Int32" Nullable="false" />
     <Property Name="OperativeDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EndOperativeDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ParityValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Presentation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="RecDate" Type="DateTime" Precision="7" />
+    <Property Name="RecDate" Type="DateTime" Precision="3" />
     <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Supervisors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -205,7 +207,6 @@
     <Property Name="patientAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="patientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ticketId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OtherIntervention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="AdditionalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="NeonatalOutcome">
@@ -214,7 +215,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Recid" Type="DateTime" Precision="7" />
+    <Property Name="Recid" Type="DateTime" Precision="3" />
     <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="patient_diagnose">
@@ -234,8 +235,8 @@
     <Property Name="Outcome_sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Outcome_State" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Outcome_weight" Type="Double" />
-    <Property Name="Positive_date" Type="DateTime" Precision="0" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="Positive_date" Type="DateTime" Precision="3" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
     <Property Name="Supervisor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Surgeon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
@@ -246,14 +247,14 @@
     <Property Name="recid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="patient_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="patient_age" Type="Double" />
-    <Property Name="patient_birthdate" Type="DateTime" Precision="0" />
+    <Property Name="patient_birthdate" Type="DateTime" Precision="3" />
     <Property Name="patient_contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="patient_email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="patient_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="patient_image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Patient_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="patient_sex" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="rec_date" Type="DateTime" Precision="0" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityContainer Name="unit5Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
@@ -276,5 +277,35 @@
     <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcome" />
     <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" />
     <EntitySet Name="patient_profile" EntityType="Self.patient_profile" />
+    <EntitySet Name="Lectures" EntityType="unit5Model.Lecture" />
+    <EntitySet Name="Clinical_Rounds" EntityType="unit5Model.Clinical_Rounds" />
   </EntityContainer>
+  <EntityType Name="Lecture">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="rec_date" Type="DateTime" Precision="3" />
+    <Property Name="Topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Students_Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lecture_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lecturer_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Substitute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Clinical_Rounds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rec_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lecture_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lecturer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="First_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Second_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

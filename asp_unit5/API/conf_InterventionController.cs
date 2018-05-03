@@ -18,6 +18,44 @@ namespace asp_unit5.API
 
 
 
+
+        [Route("{getDateRange}")]
+        [HttpGet]
+
+        public IHttpActionResult getPatientDateRange([FromUri] string from, string to)
+        {
+
+            var Profile_DataObject = (dynamic)null;
+
+
+            if (from != "undefined" && to != "undefined")
+            {
+                try
+                {
+                    DateTime startDate = DateTime.Parse(from);
+                    DateTime toDate = DateTime.Parse(to);
+                    Profile_DataObject = db.CasulityProfiles.Where(u => u.AdmissionDate >= startDate && u.AdmissionDate <= toDate).ToList();
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+        
+
+
+
+            }
+      
+         
+
+
+            return Ok(Profile_DataObject);
+        }
+
+
+
         [Route("{getPatientProfile}")]
         [HttpGet]
 

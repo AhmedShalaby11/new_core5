@@ -4,7 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b77da8b0d28840999a84ab442945a76e" Name="Diagram1">
+<<<<<<< HEAD
+      <Diagram DiagramId="a9099e1c0b80485ba2361d508a339083" Name="Diagram1">
+        <EntityTypeShape EntityType="unit5Entity.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.CasulityProfile" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.Complicaiton" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_by" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_child_presentation" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_child_state" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_cs_indication" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_degree" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_GynaDisorder" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_Intervention" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_medicalDisorder" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_medicalObestetric" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_Outcome" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_Outcome_State" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.conf_title" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.doctor_profile" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.Gynacology" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.NeonatalOutcome" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.patient_diagnose" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Entity.patient_profile" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+=======
+      <Diagram DiagramId="b77da8b0d28840999a84ab442945a76e" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="unit5Model.C__EFMigrationsHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.CasulityProfile" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.Complicaiton" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
@@ -25,6 +48,9 @@
         <EntityTypeShape EntityType="unit5Model.NeonatalOutcome" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.patient_diagnose" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="unit5Model.patient_profile" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unit5Model.Lecture" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="unit5Model.Clinical_Rounds" Width="1.5" PointX="3.375" PointY="12.75" />
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

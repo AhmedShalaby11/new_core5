@@ -38,7 +38,7 @@ namespace asp_unit5.Entity
         public string ticketId { get; set; }
         public string NumberOfLivingFemale { get; set; }
         public string NumberOfLivingMale { get; set; }
-        public string AdmissionDate { get; set; }
+        public Nullable<System.DateTime> AdmissionDate { get; set; }
         public string By { get; set; }
         public string Obstetric { get; set; }
         public string Disorder { get; set; }
@@ -46,7 +46,7 @@ namespace asp_unit5.Entity
         public string NeonatalCondition { get; set; }
         public string OtherIntervention { get; set; }
         public string Indications { get; set; }
-        public string InterventionDate { get; set; }
+        public Nullable<System.DateTime> InterventionDate { get; set; }
         public string AdditionalNotes { get; set; }
     }
 }

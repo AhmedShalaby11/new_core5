@@ -31,11 +31,11 @@ namespace asp_unit5
             gynacology.patientAge = DropDown_PatientAge.Text.Trim();
             gynacology.ticketId = textbox_TicketNumber.Text.Trim();
             gynacology.AdmissionDate = Date_AdmissionDate.Value;
-
+            //
             gynacology.ParityValue = textbox_Parity.Text.Trim();
             gynacology.AddedValue = textboxPlus.Text.Trim();
 
-
+            //
             gynacology.Dynamics = "";
             gynacology.Dynamics += "Parity 1:" + dropdown_parity1.Value.Replace("Select", "NA").Trim();
             gynacology.Dynamics += ",Parity 2:" + dropdown_parity2.Value.Replace("Select", "NA").Trim();
@@ -47,8 +47,12 @@ namespace asp_unit5
             gynacology.Dynamics += ",Parity 8:" + dropdown_parity8.Value.Replace("Select", "NA").Trim();
             gynacology.Dynamics += ",Parity 9:" + dropdown_parity9.Value.Replace("Select", "NA").Trim();
             gynacology.Dynamics += ",Parity 10:" + dropdown_parity10.Value.Replace("Select", "NA").Trim();
-            gynacology.Presentation = DropDown_Diagnosis_Presentation.Text.Trim().Replace("Select", "NA").Trim();
-            gynacology.ChildState = DropDown_Diagnosis_State.Text.Trim().Replace("Select", "NA").Trim();
+            //
+            gynacology.Complications = DropDown_Intervention_Complications.Text.Trim().Replace("Select", "NA");
+            gynacology.ICU = checkbox_ICU.ToString();
+            gynacology.EndOperativeDate = Date_enddate.Value;
+            //gynacology.Presentation = DropDown_Diagnosis_Presentation.Text.Trim().Replace("Select", "NA").Trim();
+            //gynacology.ChildState = DropDown_Diagnosis_State.Text.Trim().Replace("Select", "NA").Trim();
             gynacology.NumberOfLivingMale = Convert.ToInt32(textbox_LivingMale.Text.Trim());
             gynacology.NumberOfLivingFemale = Convert.ToInt32(textbox_LivingFemale.Text.Trim());
             gynacology.OperativeDate = DateTime_OperativeDate.Value;

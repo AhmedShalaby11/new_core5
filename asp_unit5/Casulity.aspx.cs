@@ -34,7 +34,7 @@ namespace asp_unit5
             casulity.patientName = textbox_PatientName.Text.Trim();
             casulity.patientAge = DropDown_PatientAge.Text.Trim();
             casulity.ticketId = textbox_TicketNumber.Text.Trim();
-            casulity.AdmissionDate = Date_AdmissionDate.Value;
+            casulity.AdmissionDate = DateTime.Parse(Date_AdmissionDate.Value);
             
             casulity.ParityValue = textbox_Parity.Text.Trim();
             casulity.AddedValue = textboxPlus.Text.Trim();
@@ -56,13 +56,13 @@ namespace asp_unit5
             casulity.Weeks = DropDown_Diagnosis_Weeks.Text.Trim();
             casulity.Days = DropDown_Diagnosis_Days.Text.Trim();
             casulity.By = DropDown_Diagnosis_By.Text.Trim().Replace("Select", "NA").Trim();
-            casulity.Obstetric = DropDown_Diagnosis_Obstetric.Text.Trim().Replace("Select", "NA").Trim();
-            casulity.Disorder = DropDown_Diagnosis_Disorder.Text.Trim().Replace("Select", "NA").Trim();
+            casulity.Obstetric = DropDown_Diagnosis_Obstetric.Text.Trim().Replace("Select", "NA").Trim() + "," + DropDown_Additional_ObstetricDisorder.Text.Replace("Select", "NA");
+            casulity.Disorder = DropDown_Diagnosis_Disorder.Text.Trim().Replace("Select", "NA").Trim() + "," + DropDown_Additional_MedicalDisorder.Text.Replace("Select", "NA");
             casulity.Presentation = DropDown_Diagnosis_Presentation.Text.Trim().Replace("Select", "NA").Trim();
             casulity.ChildState = DropDown_Diagnosis_State.Text.Trim().Replace("Select", "NA").Trim();
             casulity.NumberOfLivingMale = textbox_LivingMale.Text.Trim();
             casulity.NumberOfLivingFemale = textbox_LivingFemale.Text.Trim();
-            casulity.InterventionDate = Date_InterventionDate.Value;
+            casulity.InterventionDate = DateTime.Parse(Date_InterventionDate.Value);
             casulity.Intervention = DropDown_Intervention_InterventionSelection.Text.Trim().Replace("Select", "NA").Trim();
             casulity.Complications = DropDown_Intervention_Complications.Text.Trim().Replace("Select", "NA").Trim();
             casulity.AdditionalComplications = DropDown_Intervention_ExtraComplications.Text.Trim().Replace("Select", "NA").Trim();
@@ -71,7 +71,7 @@ namespace asp_unit5
             casulity.Sex = DropDown_Intervention_Sex.Text.Trim().Replace("Select", "NA").Trim();
             casulity.NeonatalCondition = DropDown_Intervention_NeonatalCondition.Text.Trim().Replace("Select", "NA").Trim();
          //   casulity.OtherIntervention = DropDown_Other_Interventions.Text.Trim().Replace("Select", "NA").Trim();
-            casulity.OtherIntervention = "test";
+            casulity.OtherIntervention = DropDown_Other_Interventions.Text.Trim();
             casulity.Indications = DropDown_cs_Indications.Text.Trim().Replace("Select", "NA").Trim();
             casulity.Surgeons = DropDown_Staff_Surgeon.Text.Trim().Replace("Select", "NA").Trim();
             casulity.Assistants = DropDown_Staff_Assistant.Text.Trim().Replace("Select", "NA").Trim();

@@ -202,42 +202,6 @@ namespace asp_unit5 {
         protected global::System.Web.UI.HtmlControls.HtmlSelect dropdown_parity10;
         
         /// <summary>
-        /// DropDown_Diagnosis_Presentation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_Presentation;
-        
-        /// <summary>
-        /// sql_data_table_Presentation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_Presentation;
-        
-        /// <summary>
-        /// DropDown_Diagnosis_State control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDown_Diagnosis_State;
-        
-        /// <summary>
-        /// sql_data_table_State control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_State;
-        
-        /// <summary>
         /// textbox_LivingMale control.
         /// </summary>
         /// <remarks>
@@ -263,6 +227,42 @@ namespace asp_unit5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl DateTime_OperativeDate;
+        
+        /// <summary>
+        /// Date_enddate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Date_enddate;
+        
+        /// <summary>
+        /// checkbox_ICU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkbox_ICU;
+        
+        /// <summary>
+        /// DropDown_Intervention_Complications control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDown_Intervention_Complications;
+        
+        /// <summary>
+        /// sql_data_table_Complications control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_data_table_Complications;
         
         /// <summary>
         /// DropDown_Intervention control.

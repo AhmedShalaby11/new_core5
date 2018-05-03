@@ -1,17 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="unit5ModelStoreContainer" CdmEntityContainer="unit5Entities">
+  <EntityContainerMapping StorageEntityContainer="unit5EntityStoreContainer" CdmEntityContainer="unit5Entities">
     <EntitySetMapping Name="C__EFMigrationsHistory">
-      <EntityTypeMapping TypeName="unit5Model.C__EFMigrationsHistory">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.C__EFMigrationsHistory">
         <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.C__EFMigrationsHistory)">
+        <MappingFragment StoreEntitySet="C__EFMigrationsHistory">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
           <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
           <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CasulityProfiles">
-      <EntityTypeMapping TypeName="unit5Model.CasulityProfile">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.CasulityProfile">
         <MappingFragment StoreEntitySet="CasulityProfile">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.CasulityProfile)">
+        <MappingFragment StoreEntitySet="CasulityProfiles">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
           <ScalarProperty Name="Assistants" ColumnName="Assistants" />
@@ -50,7 +60,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Complicaitons">
-      <EntityTypeMapping TypeName="unit5Model.Complicaiton">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.Complicaiton">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.Complicaiton)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="Complicaitons">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -60,7 +74,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_by">
-      <EntityTypeMapping TypeName="unit5Model.conf_by">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_by">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_by)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_by">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="element_name" ColumnName="element_name" />
@@ -68,7 +86,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_child_presentation">
-      <EntityTypeMapping TypeName="unit5Model.conf_child_presentation">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_child_presentation">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_child_presentation)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_child_presentation">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="presentation_name" ColumnName="presentation_name" />
@@ -77,7 +99,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_child_state">
-      <EntityTypeMapping TypeName="unit5Model.conf_child_state">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_child_state">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_child_state)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_child_state">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="rec_date" ColumnName="rec_date" />
@@ -86,7 +112,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_cs_indication">
-      <EntityTypeMapping TypeName="unit5Model.conf_cs_indication">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_cs_indication">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_cs_indication)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_cs_indication">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="cs_indication_name" ColumnName="cs_indication_name" />
@@ -96,7 +126,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_degree">
-      <EntityTypeMapping TypeName="unit5Model.conf_degree">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_degree">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_degree)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_degree">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="degree_name" ColumnName="degree_name" />
@@ -105,7 +139,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_GynaDisorder">
-      <EntityTypeMapping TypeName="unit5Model.conf_GynaDisorder">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_GynaDisorder">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_GynaDisorder)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_GynaDisorder">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="element_name" ColumnName="element_name" />
@@ -114,7 +152,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_Intervention">
-      <EntityTypeMapping TypeName="unit5Model.conf_Intervention">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_Intervention">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_Intervention)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_Intervention">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="intervention_name" ColumnName="intervention_name" />
@@ -124,7 +166,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_medicalDisorder">
-      <EntityTypeMapping TypeName="unit5Model.conf_medicalDisorder">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_medicalDisorder">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_medicalDisorder)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_medicalDisorder">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="element_name" ColumnName="element_name" />
@@ -132,7 +178,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_medicalObestetric">
-      <EntityTypeMapping TypeName="unit5Model.conf_medicalObestetric">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_medicalObestetric">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_medicalObestetric)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_medicalObestetric">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="element_name" ColumnName="element_name" />
@@ -140,7 +190,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_Outcome">
-      <EntityTypeMapping TypeName="unit5Model.conf_Outcome">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_Outcome">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_Outcome)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_Outcome">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="Outcome_name" ColumnName="Outcome_name" />
@@ -149,7 +203,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_Outcome_State">
-      <EntityTypeMapping TypeName="unit5Model.conf_Outcome_State">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_Outcome_State">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_Outcome_State)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_Outcome_State">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="rec_date" ColumnName="rec_date" />
@@ -158,7 +216,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="conf_title">
-      <EntityTypeMapping TypeName="unit5Model.conf_title">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.conf_title">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.conf_title)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="conf_title">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="rec_date" ColumnName="rec_date" />
@@ -167,7 +229,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="doctor_profile">
-      <EntityTypeMapping TypeName="unit5Model.doctor_profile">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.doctor_profile">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.doctor_profile)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="doctor_profile">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="doctor_bach_year" ColumnName="doctor_bach_year" />
@@ -190,10 +256,13 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Gynacologies">
-      <EntityTypeMapping TypeName="unit5Model.Gynacology">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.Gynacology">
         <MappingFragment StoreEntitySet="Gynacology">
-          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
-          <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.Gynacology)">
+        <MappingFragment StoreEntitySet="Gynacologies">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="AddedValue" ColumnName="AddedValue" />
           <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
@@ -207,9 +276,11 @@
           <ScalarProperty Name="Dynamics" ColumnName="Dynamics" />
           <ScalarProperty Name="ICU" ColumnName="ICU" />
           <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+          <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
           <ScalarProperty Name="NumberOfLivingFemale" ColumnName="NumberOfLivingFemale" />
           <ScalarProperty Name="NumberOfLivingMale" ColumnName="NumberOfLivingMale" />
           <ScalarProperty Name="OperativeDate" ColumnName="OperativeDate" />
+          <ScalarProperty Name="EndOperativeDate" ColumnName="EndOperativeDate" />
           <ScalarProperty Name="Outcome" ColumnName="Outcome" />
           <ScalarProperty Name="ParityValue" ColumnName="ParityValue" />
           <ScalarProperty Name="Presentation" ColumnName="Presentation" />
@@ -223,12 +294,22 @@
           <ScalarProperty Name="patientAge" ColumnName="patientAge" />
           <ScalarProperty Name="patientName" ColumnName="patientName" />
           <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+<<<<<<< HEAD
+=======
+          <ScalarProperty Name="OtherIntervention" ColumnName="OtherIntervention" />
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
+          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NeonatalOutcomes">
-      <EntityTypeMapping TypeName="unit5Model.NeonatalOutcome">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.NeonatalOutcome">
         <MappingFragment StoreEntitySet="NeonatalOutcome">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.NeonatalOutcome)">
+        <MappingFragment StoreEntitySet="NeonatalOutcomes">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Recid" ColumnName="Recid" />
@@ -237,7 +318,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="patient_diagnose">
-      <EntityTypeMapping TypeName="unit5Model.patient_diagnose">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.patient_diagnose">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.patient_diagnose)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="patient_diagnose">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="Assistant" ColumnName="Assistant" />
@@ -260,7 +345,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="patient_profile">
-      <EntityTypeMapping TypeName="unit5Model.patient_profile">
+<<<<<<< HEAD
+      <EntityTypeMapping TypeName="unit5Entity.patient_profile">
+=======
+      <EntityTypeMapping TypeName="IsTypeOf(unit5Model.patient_profile)">
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396
         <MappingFragment StoreEntitySet="patient_profile">
           <ScalarProperty Name="recid" ColumnName="recid" />
           <ScalarProperty Name="patient_address" ColumnName="patient_address" />
@@ -273,6 +362,36 @@
           <ScalarProperty Name="Patient_name" ColumnName="Patient_name" />
           <ScalarProperty Name="patient_sex" ColumnName="patient_sex" />
           <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lectures">
+      <EntityTypeMapping TypeName="unit5Model.Lecture">
+        <MappingFragment StoreEntitySet="Lecture">
+          <ScalarProperty Name="Substitute_Name" ColumnName="Substitute_Name" />
+          <ScalarProperty Name="Lecturer_Name" ColumnName="Lecturer_Name" />
+          <ScalarProperty Name="Lecture_Date" ColumnName="Lecture_Date" />
+          <ScalarProperty Name="Students_Flag" ColumnName="Students_Flag" />
+          <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clinical_Rounds">
+      <EntityTypeMapping TypeName="unit5Model.Clinical_Rounds">
+        <MappingFragment StoreEntitySet="Clinical_Rounds">
+          <ScalarProperty Name="Student_flag" ColumnName="Student_flag" />
+          <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
+          <ScalarProperty Name="Second_Subsitute_name" ColumnName="Second_Subsitute_name" />
+          <ScalarProperty Name="First_Subsitute_name" ColumnName="First_Subsitute_name" />
+          <ScalarProperty Name="Lecturer_name" ColumnName="Lecturer_name" />
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Lecture_date" ColumnName="Lecture_date" />
+          <ScalarProperty Name="rec_date" ColumnName="rec_date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

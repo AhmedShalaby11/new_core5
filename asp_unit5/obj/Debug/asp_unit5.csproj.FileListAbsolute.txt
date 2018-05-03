@@ -5,4 +5,20 @@ C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\asp_unit5.pdb
 C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.csproj.CoreCompileInputs.cache
 C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.dll
 C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.pdb
+<<<<<<< HEAD
+C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\LiveCharts.dll
+C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\LiveCharts.Wpf.dll
+C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\LiveCharts.pdb
+C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\LiveCharts.xml
+C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\LiveCharts.Wpf.pdb
+C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\bin\LiveCharts.Wpf.xml
+=======
 C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\obj\Debug\asp_unit5.csprojResolveAssemblyReference.cache
+C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\bin\ApplicationInsights.config
+C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\bin\asp_unit5.dll.config
+C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\bin\asp_unit5.dll
+C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\bin\asp_unit5.pdb
+C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\obj\Debug\asp_unit5.dll
+C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\obj\Debug\asp_unit5.pdb
+C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\obj\Debug\asp_unit5.csprojResolveAssemblyReference.cache
+>>>>>>> 264fe1e92fa838d61b48e86f9005c9bf238c6396

@@ -67,33 +67,6 @@ namespace asp_unit5 {
         protected global::System.Web.UI.WebControls.DropDownList Select_Title;
         
         /// <summary>
-        /// TextArea_otherDegrees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea_otherDegrees;
-        
-        /// <summary>
-        /// TextArea_otherQualifications control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea_otherQualifications;
-        
-        /// <summary>
-        /// Select_Degree control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Select_Degree;
-        
-        /// <summary>
         /// Select_AcademicDegree control.
         /// </summary>
         /// <remarks>
@@ -128,6 +101,24 @@ namespace asp_unit5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText date_PHD;
+        
+        /// <summary>
+        /// TextArea_otherDegrees control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea_otherDegrees;
+        
+        /// <summary>
+        /// TextArea_otherQualifications control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea_otherQualifications;
         
         /// <summary>
         /// Select_DoctorPresence control.

@@ -78,20 +78,8 @@
                   
                         <small id="" class="form-text text-muted">Your current title.</small>
                     </div>
-                    <div style="text-align: left;" id="text9" class="form-group">
-                        <label for="forlabel">Other Degrees </label>
-                        <textarea runat="server" id="TextArea_otherDegrees" class="form-control" cols="20" rows="4"></textarea>
-                          
-                        <small id="" class="form-text text-muted">Additional Degrees </small>
-                    </div>
-                    <div style="text-align: left;" id="text10" class="form-group">
-                        <label for="forlabel">Other Qualifications </label>
-                       <textarea runat="server" id="TextArea_otherQualifications" class="form-control" cols="20" rows="4"></textarea>
-
-                         
-                        <small id="" class="form-text text-muted">Conferences,Researches</small>
-                    </div>
-                    <div style="text-align: left;" id="text3" class="form-group">
+             
+                <%--    <div style="text-align: left;" id="text3" class="form-group">
                         <label for="forlabel">Degree </label>
                               <asp:DropDownList ID="Select_Degree" CssClass="btn w-50" runat="server">
                                <asp:ListItem>Degree</asp:ListItem>
@@ -99,7 +87,7 @@
                            </asp:DropDownList>
 
                         <small id="" class="form-text text-muted">Your current degree</small>
-                    </div>
+                    </div>--%>
                     <div style="text-align: left;" id="text1" class="form-group">
                         <label for="forlabel">Academic Degree</label>
                         <asp:DropDownList ID="Select_AcademicDegree" CssClass="btn w-50" runat="server">
@@ -125,8 +113,22 @@
                         <input runat="server" type="text" class="datepicker form-control datepicker " id="date_PHD">
                         <small id="" class="form-text text-muted"></small>
                     </div>
-                    <span>Doctor Presence</span>
+             
 
+                           <div style="text-align: left;" id="text9" class="form-group">
+                        <label for="forlabel">Other Degrees </label>
+                        <textarea runat="server" id="TextArea_otherDegrees" class="form-control" cols="20" rows="4"></textarea>
+                          
+                        <small id="" class="form-text text-muted">Additional Degrees </small>
+                    </div>
+                    <div style="text-align: left;" id="text10" class="form-group">
+                        <label for="forlabel">Other Qualifications </label>
+                       <textarea runat="server" id="TextArea_otherQualifications" class="form-control" cols="20" rows="4"></textarea>
+
+                         
+                        <small id="" class="form-text text-muted">Conferences,Researches</small>
+                    </div>
+                           <span>Doctor Presence</span>
                           <asp:DropDownList ID="Select_DoctorPresence" CssClass="btn w-50" runat="server">
                                <asp:ListItem>Available</asp:ListItem>
                                         <asp:ListItem>Abroad</asp:ListItem>
@@ -140,11 +142,6 @@
               
             </div>
 
-<script>
-    $(function () {
-        $(".datepicker").datepicker();
-    });
-  </script>
         </section>
 
 </asp:Content>

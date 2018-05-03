@@ -16,9 +16,10 @@
     <script src="Angular/HomeController.js"></script>
     <link href="Content/Site.css" rel="stylesheet" />
 
-     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <%-- datepicker scripts --%>
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -37,7 +38,7 @@
         <a class="text-center text-white text-uppercase nav-link" href="Registration.aspx">New Profile</a>
       </li>
          <li class="nav-item">
-        <a class="text-center text-white text-uppercase  nav-link" href="Casulity.aspx">Casulity</a>
+        <a class="text-center text-white text-uppercase  nav-link" href="Casulity.aspx">Casualty</a>
       </li>
 
       <li class="nav-item">
@@ -50,7 +51,7 @@
 
        <ul class="nav navbar-nav navbar-right">
            <li>
-               <h6 class="text-center text-white text-capitalize">Demerdash Hospital - Unit 5</h6>
+               <h6 class="text-center text-white text-capitalize">ASUMH Hospital - Unit 5</h6>
            </li>
            </ul>
  
@@ -60,5 +61,49 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    
+<script>
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+  </script>
+
+     <script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            //language:  'fr',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1
+        });
+        $('.form_date').datetimepicker({
+            language: 'fr',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('.form_time').datetimepicker({
+            language: 'fr',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
+    </script>
 </body>
 </html>

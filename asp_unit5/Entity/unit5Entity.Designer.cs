@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ShalabyA\source\repos\asp_unit5\asp_unit5\Entity\unit5Entity.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\amohamed279\Documents\GitHub\new_core5\asp_unit5\Entity\unit5Entity.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

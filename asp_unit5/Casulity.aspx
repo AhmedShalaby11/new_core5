@@ -9,7 +9,7 @@
         
         <div ng-controller="ngControllerCasulity" class="container" style="zoom: .9">
         <div class="row justify-content-lg-start">
-            <h3 class="display-4">Patient Portal | Casulity</h3>
+            <h3 class="display-4">Patient Portal | Casualty</h3>
 
         </div>
 
@@ -73,7 +73,7 @@
                             <h3 ng-show="ng0ParityNumber"><span class="text-uppercase text-dark">GA</span> {{ng0ParityNumber}} + {{ng0Plus}},<span class="text-uppercase text-dark">Weeks</span>: {{ng0Weeks}} ,<span class="text-uppercase text-dark">Days</span>: {{ng0Days}}  , <span class="text-uppercase text-dark">By</span>: {{ng0By}} , <span class="text-uppercase text-dark">Presentation</span>: {{ng0Presentation}}, <span class="text-uppercase text-dark">State</span>: {{ng0State}}</h3>
 
             </div>
-        <div class="row justify-content-lg-start">
+        <div class="row justify-content-lg-center">
            
             <div class="col-sm-1">
                 <div class="form-group">
@@ -132,38 +132,20 @@
                 </div>
             </div>
             <div class="col-sm-2">
-                <div style="text-align: left;" id="text4" class="form-group">
-                    <label for="forlabel">Obstetric Disorder </label>
-
-                    <asp:DropDownList ID="DropDown_Diagnosis_Obstetric" CssClass="btn-secondary btn  form-control border-dark" runat="server" DataTextField="element_name" DataValueField="element_name" DataSourceID="sql_data_table_Obestetric_Disorder">
-                        <asp:ListItem>Select</asp:ListItem>
-
-                    </asp:DropDownList>
-
-
-                    <asp:SqlDataSource ID="sql_data_table_Obestetric_Disorder" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
-
-
-                </div>
+             
             </div>
+
+          
+             
 
             <div class="col-sm-2">
-                <div style="text-align: left;" id="text5" class="form-group">
-                    <label for="forlabel">Medical Disorder </label>
+             
+                  
 
-                    <asp:DropDownList ID="DropDown_Diagnosis_Disorder" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server"  DataTextField="element_name" DataValueField="element_name" DataSourceID="sql_data_table_MedicalDisorder">
-                        <asp:ListItem>Select</asp:ListItem>
-
-                    </asp:DropDownList>
-
-
-                    <asp:SqlDataSource ID="sql_data_table_MedicalDisorder" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="sql_data_table_" runat="server"></asp:SqlDataSource>
-
-
-                </div>
             </div>
         </div>
+
+         
 
         <div ng-show="ng0ParityNumber" id="subdropdowns" class="row  justify-content-lg-center mb-4">
             <div class="col-md-3">
@@ -237,6 +219,82 @@
             </div>
 
                 </div>
+
+
+                 <div class="justify-content-lg-center row">
+                <div class="col-md-3">
+   <div style="text-align: left;" id="text4" class="form-group">
+                    <label for="forlabel">Obstetric Disorder </label>
+
+                    <asp:DropDownList ID="DropDown_Diagnosis_Obstetric" CssClass="btn-secondary btn  form-control border-dark" runat="server" DataTextField="element_name" DataValueField="element_name" DataSourceID="sql_data_table_Obestetric_Disorder">
+                        <asp:ListItem>Select</asp:ListItem>
+
+                    </asp:DropDownList>
+
+
+                    <asp:SqlDataSource ID="sql_data_table_Obestetric_Disorder" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
+
+
+                </div>             
+                </div>
+                <div class="col-md-3">
+                   <div style="text-align: left;" id="text5" class="form-group">
+                    <label for="forlabel">Medical Disorder </label>
+
+                    <asp:DropDownList ID="DropDown_Diagnosis_Disorder" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server"  DataTextField="element_name" DataValueField="element_name" DataSourceID="sql_data_table_MedicalDisorder">
+                        <asp:ListItem>Select</asp:ListItem>
+
+                    </asp:DropDownList>
+
+
+                    <asp:SqlDataSource ID="sql_data_table_MedicalDisorder" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="sql_data_table_" runat="server"></asp:SqlDataSource>
+
+
+                </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="justify-content-lg-center row">
+                <div class="col-md-3">
+                       <div style="text-align: left;" id="text4" class="form-group">
+                    <label for="forlabel">Additional Obstetric Disorder </label>
+
+                    <asp:DropDownList ID="DropDown_Additional_ObstetricDisorder" CssClass="btn-secondary btn  form-control border-dark" runat="server" DataTextField="element_name" DataValueField="element_name" DataSourceID="sql_data_table_Obestetric_Disorder">
+                        <asp:ListItem>Select</asp:ListItem>
+
+                    </asp:DropDownList>
+
+
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
+
+
+            </div>
+             
+                </div>
+                <div class="col-md-3">
+                    <div style="text-align: left;" id="text5" class="form-group">
+                    <label for="forlabel">Additional Medical Disorder </label>
+
+                    <asp:DropDownList ID="DropDown_Additional_MedicalDisorder" CssClass="btn-secondary btn btn-secondary btn-secondary form-control border-dark" runat="server"  DataTextField="element_name" DataValueField="element_name" DataSourceID="sql_data_table_MedicalDisorder">
+                        <asp:ListItem>Select</asp:ListItem>
+
+                    </asp:DropDownList>
+
+
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:unit5ConnectionString %>" SelectCommand="SELECT [element_name] FROM [conf_medicalDisorder]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server"></asp:SqlDataSource>
+
+
+                </div>
+                </div>
+
+
+
+            </div>
             <hr />
         <h5>For Baby</h5>
         <div class="mt-3 row justify-content-lg-start">
