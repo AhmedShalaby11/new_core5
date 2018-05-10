@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="unit5ModelStoreContainer" CdmEntityContainer="unit5Entities1">
+  <EntityContainerMapping StorageEntityContainer="unit5ModelStoreContainer" CdmEntityContainer="unit5Entities">
     <EntitySetMapping Name="C__EFMigrationsHistory">
       <EntityTypeMapping TypeName="unit5Model.C__EFMigrationsHistory">
         <MappingFragment StoreEntitySet="__EFMigrationsHistory">
@@ -304,24 +304,6 @@
           <ScalarProperty Name="Second_Subsitute_name" ColumnName="Second_Subsitute_name" />
           <ScalarProperty Name="Attended_flag" ColumnName="Attended_flag" />
           <ScalarProperty Name="Student_flag" ColumnName="Student_flag" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Researches">
-      <EntityTypeMapping TypeName="unit5Model.Research">
-        <MappingFragment StoreEntitySet="Research">
-          <ScalarProperty Name="Rec_id" ColumnName="Rec_id" />
-          <ScalarProperty Name="Registration_date" ColumnName="Registration_date" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="Research_Title" ColumnName="Research_Title" />
-          <ScalarProperty Name="Researcher_External" ColumnName="Researcher_External" />
-          <ScalarProperty Name="Researcher_Staff" ColumnName="Researcher_Staff" />
-          <ScalarProperty Name="Super5" ColumnName="Super5" />
-          <ScalarProperty Name="Super4" ColumnName="Super4" />
-          <ScalarProperty Name="Super3" ColumnName="Super3" />
-          <ScalarProperty Name="Super2" ColumnName="Super2" />
-          <ScalarProperty Name="Super1" ColumnName="Super1" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

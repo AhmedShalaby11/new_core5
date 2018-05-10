@@ -54,11 +54,7 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="rec_date" Type="datetime" />
-<<<<<<< HEAD
     <Property Name="Lecture_date" Type="datetime" />
-=======
-    <Property Name="Lecture_date" Type="nvarchar(max)" />
->>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
     <Property Name="Time" Type="nvarchar(max)" />
     <Property Name="group" Type="nvarchar(max)" />
     <Property Name="Lecturer_name" Type="nvarchar(max)" />
@@ -290,23 +286,6 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
     <Property Name="patient_sex" Type="varchar" MaxLength="20" />
     <Property Name="rec_date" Type="datetime2" Precision="0" />
   </EntityType>
-  <EntityType Name="Research">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Super1" Type="nvarchar(max)" />
-    <Property Name="Super2" Type="nvarchar(max)" />
-    <Property Name="Super3" Type="nvarchar(max)" />
-    <Property Name="Super4" Type="nvarchar(max)" />
-    <Property Name="Super5" Type="nvarchar(max)" />
-    <Property Name="Researcher_Staff" Type="nvarchar(max)" />
-    <Property Name="Researcher_External" Type="nvarchar(max)" />
-    <Property Name="Research_Title" Type="nvarchar(max)" />
-    <Property Name="State" Type="nvarchar(max)" />
-    <Property Name="Registration_date" Type="datetime" />
-    <Property Name="Rec_id" Type="datetime" />
-  </EntityType>
   <EntityContainer Name="unit5ModelStoreContainer">
     <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CasulityProfile" EntityType="Self.CasulityProfile" Schema="dbo" store:Type="Tables" />
@@ -329,7 +308,6 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
     <EntitySet Name="NeonatalOutcome" EntityType="Self.NeonatalOutcome" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
-<<<<<<< HEAD
     <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [Clinical_Rounds].[Id] AS [Id], 
@@ -344,8 +322,5 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
     [Clinical_Rounds].[Student_flag] AS [Student_flag]
     FROM [dbo].[Clinical_Rounds] AS [Clinical_Rounds]</DefiningQuery>
     </EntitySet>
-=======
-    <EntitySet Name="Research" EntityType="Self.Research" Schema="dbo" store:Type="Tables" />
->>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
   </EntityContainer>
 </Schema>

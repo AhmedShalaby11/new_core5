@@ -24,7 +24,7 @@ namespace asp_unit5
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            Entity.unit5Entities1 db  = new Entity.unit5Entities1();
+            Entity.unit5Entities db  = new Entity.unit5Entities();
             Entity.CasulityProfile casulity = new Entity.CasulityProfile();
 
             ///insert ( mapping )

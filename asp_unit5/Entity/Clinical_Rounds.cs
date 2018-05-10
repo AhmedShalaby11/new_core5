@@ -16,11 +16,7 @@ namespace asp_unit5.Entity
     {
         public int Id { get; set; }
         public Nullable<System.DateTime> rec_date { get; set; }
-<<<<<<< HEAD
         public Nullable<System.DateTime> Lecture_date { get; set; }
-=======
-        public string Lecture_date { get; set; }
->>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
         public string Time { get; set; }
         public string group { get; set; }
         public string Lecturer_name { get; set; }

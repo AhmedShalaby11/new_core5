@@ -59,11 +59,7 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="rec_date" Type="datetime" />
-<<<<<<< HEAD
           <Property Name="Lecture_date" Type="datetime" />
-=======
-          <Property Name="Lecture_date" Type="nvarchar(max)" />
->>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
           <Property Name="Time" Type="nvarchar(max)" />
           <Property Name="group" Type="nvarchar(max)" />
           <Property Name="Lecturer_name" Type="nvarchar(max)" />
@@ -295,23 +291,6 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
           <Property Name="patient_sex" Type="varchar" MaxLength="20" />
           <Property Name="rec_date" Type="datetime2" Precision="0" />
         </EntityType>
-        <EntityType Name="Research">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Super1" Type="nvarchar(max)" />
-          <Property Name="Super2" Type="nvarchar(max)" />
-          <Property Name="Super3" Type="nvarchar(max)" />
-          <Property Name="Super4" Type="nvarchar(max)" />
-          <Property Name="Super5" Type="nvarchar(max)" />
-          <Property Name="Researcher_Staff" Type="nvarchar(max)" />
-          <Property Name="Researcher_External" Type="nvarchar(max)" />
-          <Property Name="Research_Title" Type="nvarchar(max)" />
-          <Property Name="State" Type="nvarchar(max)" />
-          <Property Name="Registration_date" Type="datetime" />
-          <Property Name="Rec_id" Type="datetime" />
-        </EntityType>
         <EntityContainer Name="unit5ModelStoreContainer">
           <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CasulityProfile" EntityType="Self.CasulityProfile" Schema="dbo" store:Type="Tables" />
@@ -334,7 +313,6 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
           <EntitySet Name="NeonatalOutcome" EntityType="Self.NeonatalOutcome" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="patient_profile" EntityType="Self.patient_profile" Schema="dbo" store:Type="Tables" />
-<<<<<<< HEAD
           <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Clinical_Rounds].[Id] AS [Id], 
@@ -349,9 +327,6 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
     [Clinical_Rounds].[Student_flag] AS [Student_flag]
     FROM [dbo].[Clinical_Rounds] AS [Clinical_Rounds]</DefiningQuery>
           </EntitySet>
-=======
-          <EntitySet Name="Research" EntityType="Self.Research" Schema="dbo" store:Type="Tables" />
->>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -642,7 +617,7 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
           <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="unit5Entities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="unit5Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
           <EntitySet Name="CasulityProfiles" EntityType="Self.CasulityProfile" />
           <EntitySet Name="Complicaitons" EntityType="Self.Complicaiton" />
@@ -664,66 +639,14 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
           <EntitySet Name="NeonatalOutcomes" EntityType="Self.NeonatalOutcome" />
           <EntitySet Name="patient_diagnose" EntityType="Self.patient_diagnose" />
           <EntitySet Name="patient_profile" EntityType="Self.patient_profile" />
-<<<<<<< HEAD
           <EntitySet Name="Clinical_Rounds" EntityType="Self.Clinical_Rounds" />
         </EntityContainer>
-=======
-          <EntitySet Name="Lectures" EntityType="unit5Model.Lecture" />
-          <EntitySet Name="Clinical_Rounds" EntityType="unit5Model.Clinical_Rounds" />
-          <EntitySet Name="Researches" EntityType="unit5Model.Research" />
-        </EntityContainer>
-        <EntityType Name="Lecture">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
-          <Property Name="Topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Students_Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Lecture_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Lecturer_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Substitute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Clinical_Rounds">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="rec_date" Type="DateTime" Precision="3" />
-          <Property Name="Lecture_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="group" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Lecturer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="First_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Second_Subsitute_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Attended_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Student_flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Research">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Super1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Super2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Super3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Super4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Super5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Researcher_Staff" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Researcher_External" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Research_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Registration_date" Type="DateTime" Precision="3" />
-          <Property Name="Rec_id" Type="DateTime" Precision="3" />
-        </EntityType>
->>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="unit5ModelStoreContainer" CdmEntityContainer="unit5Entities1">
+        <EntityContainerMapping StorageEntityContainer="unit5ModelStoreContainer" CdmEntityContainer="unit5Entities">
           <EntitySetMapping Name="C__EFMigrationsHistory">
             <EntityTypeMapping TypeName="unit5Model.C__EFMigrationsHistory">
               <MappingFragment StoreEntitySet="__EFMigrationsHistory">
@@ -1030,32 +953,9 @@ warning 6002: The table/view 'unit5.dbo.Clinical_Rounds' does not have a primary
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-<<<<<<< HEAD
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
-=======
-          <EntitySetMapping Name="Researches">
-            <EntityTypeMapping TypeName="unit5Model.Research">
-              <MappingFragment StoreEntitySet="Research">
-                <ScalarProperty Name="Rec_id" ColumnName="Rec_id" />
-                <ScalarProperty Name="Registration_date" ColumnName="Registration_date" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="Research_Title" ColumnName="Research_Title" />
-                <ScalarProperty Name="Researcher_External" ColumnName="Researcher_External" />
-                <ScalarProperty Name="Researcher_Staff" ColumnName="Researcher_Staff" />
-                <ScalarProperty Name="Super5" ColumnName="Super5" />
-                <ScalarProperty Name="Super4" ColumnName="Super4" />
-                <ScalarProperty Name="Super3" ColumnName="Super3" />
-                <ScalarProperty Name="Super2" ColumnName="Super2" />
-                <ScalarProperty Name="Super1" ColumnName="Super1" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          </EntityContainerMapping>
-</Mapping></edmx:Mappings>
->>>>>>> 08a1f10f0695307f636c34b81130c37b3bbf30d9
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">

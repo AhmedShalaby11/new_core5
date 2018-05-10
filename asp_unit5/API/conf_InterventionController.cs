@@ -14,7 +14,7 @@ namespace asp_unit5.API
 {
     public class conf_InterventionController : ApiController
     {
-        private Entity.unit5Entities1 db = new Entity.unit5Entities1();
+        private Entity.unit5Entities db = new Entity.unit5Entities();
 
 
 

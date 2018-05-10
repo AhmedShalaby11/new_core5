@@ -15,7 +15,7 @@ namespace asp_unit5.API
 {
     public class Clinical_RoundsController : ApiController
     {
-        private unit5Entities1 db = new unit5Entities1();
+        private Entity.unit5Entities db = new Entity.unit5Entities();
 
         // GET: api/Clinical_Rounds
         public IHttpActionResult GetClinical_Rounds()

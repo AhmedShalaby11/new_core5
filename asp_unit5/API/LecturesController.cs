@@ -15,7 +15,7 @@ namespace asp_unit5.API
 {
     public class LecturesController : ApiController
     {
-        private unit5Entities1 db = new unit5Entities1();
+        private unit5Entities db = new unit5Entities();
 
         // GET: api/Lectures
         public IHttpActionResult GetLectures()
